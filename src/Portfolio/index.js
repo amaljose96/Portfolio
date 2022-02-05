@@ -3,7 +3,7 @@ import { PortfolioContainer } from "./styles";
 import Body from "./components/Body";
 
 function Portfolio(props) {
-  return <PortfolioContainer>
+  return <PortfolioContainer className="appContainer">
     <Body/>
   </PortfolioContainer>;
 }

@@ -1,5 +1,5 @@
 const fonts={
-    default:"font-family:Consolas,monospace;"
+    default:"font-family:sans-serif;"
 }
 
 export default fonts;
