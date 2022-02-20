@@ -8,7 +8,7 @@ function Body(props) {
   return <BodyContainer>
     <BackgroundElements/>
     <Landing/>
-    {/* <Timeline/> */}
+    <Timeline/>
   </BodyContainer>;
 }
 export default Body;

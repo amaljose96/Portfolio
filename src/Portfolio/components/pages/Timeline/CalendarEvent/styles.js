@@ -8,8 +8,8 @@ export const CalendarEventContainer = styled.div`
     margin-left:49px;
     display:flex;
     align-items:center;
-    padding-top:${props=>props.gapBefore+50}px;
-    padding-bottom:${props=>props.gapAfter+50}px;
+    padding-top:20px;
+    padding-bottom:20px;
 `;
 
 export const Highlight = styled.span`
@@ -23,6 +23,7 @@ export const IconContainer = styled.div`
     margin-left:-25px;
     display:flex;
     justify-content:center;
+    align-items:center;
     background-color:${colors.background};
     height:50px;
     border-radius:50%;

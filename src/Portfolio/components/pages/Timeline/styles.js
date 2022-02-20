@@ -10,10 +10,6 @@ export const TimelineContainer = styled.div`
 `;
 
 
-export const TimelineTitle = styled.div`
-    text-align:center;
-    margin:50px;
-`;
 export const YearSection = styled.div`
     padding-left:30px;
     border-width:1px;
@@ -22,6 +18,7 @@ export const YearSection = styled.div`
 export const Year = styled.div`
     width:50px;
     box-sizing:border-box;
+    padding-left:5px;
     font-weight:bold;
     background-color:${colors.background};
     color:${colors.text};
