@@ -11,6 +11,9 @@ function TimelineToggler({types,setTypes}) {
       {
         options.map(option=>{
             return <TimelineToggleOption active={types.includes(option)} onClick={()=>{
+              if(types.length==1){
+                return
+              }
               if(types.includes(option)){
                 setTypes(types.filter(t=>t!==option))
               }

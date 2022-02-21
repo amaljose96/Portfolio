@@ -15,7 +15,9 @@ export const ProjectSections = styled.div`
     padding:0px 80px;
     box-sizing:border-box;
 `;
-export const ProjectSection = styled.div``;
+export const ProjectSection = styled.div`
+    margin-bottom:30px;
+`;
 export const ProjectSectionTitle = styled.div`
     font-size:24px;
     margin:10px 0px;
