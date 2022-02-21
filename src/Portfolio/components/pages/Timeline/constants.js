@@ -1,6 +1,12 @@
 import React from 'react';
 import { BirthdayIcon } from '../../../resources/icons/birthday';
+import { ExitIcon } from '../../../resources/icons/exit';
+import { GraduateIcon } from '../../../resources/icons/graduate';
+import { SchoolIcon } from '../../../resources/icons/school';
 import { TravelIcon } from '../../../resources/icons/travel';
+import { UniversityIcon } from '../../../resources/icons/university';
+import { VolunteerIcon } from '../../../resources/icons/volunteer';
+import { WorkIcon } from '../../../resources/icons/work';
 import { Highlight, SecondHighlight } from './CalendarEvent/styles';
 
 
@@ -24,6 +30,7 @@ export const timelineContent ={
     ],
     1999: [
         {
+            Icon: SchoolIcon,
             time: 936169200000,
             type:["education"],
             title: <>Started <Highlight>School</Highlight> at <SecondHighlight>Gulf Indian School, Kuwait</SecondHighlight></>
@@ -31,6 +38,7 @@ export const timelineContent ={
     ],
     2014: [
         {
+            Icon:GraduateIcon,
             time: 1399273200000,
             type:["education"],
             title: <>Completed <Highlight>High School</Highlight> at <SecondHighlight>Gulf Indian School, Kuwait</SecondHighlight></>,
@@ -42,6 +50,7 @@ export const timelineContent ={
             title: <><Highlight>Moved</Highlight> to <SecondHighlight>Calicut, India</SecondHighlight></>,
         },
         {
+            Icon: UniversityIcon,
             time: 1407999600000,
             type:["education"],
             title: <>Started <Highlight>Bachelors of Technology</Highlight> at <SecondHighlight>National Institute of Technology, Calicut</SecondHighlight></>,
@@ -50,11 +59,13 @@ export const timelineContent ={
     ],
     2016:[
         {
+            Icon: WorkIcon,
             time: new Date("04/01/2016"),
             type:["work"],
             title: <>Started working as <Highlight>Lab Administrator</Highlight> at <SecondHighlight>Software Systems Laboratory, NIT Calicut</SecondHighlight></>,
         },
         {
+            Icon: WorkIcon,
             time: new Date("05/01/2016"),
             type:["work"],
             durationText:"May - June 2016",
@@ -69,6 +80,7 @@ export const timelineContent ={
             title: <><Highlight>Moved</Highlight> to <SecondHighlight>Bangalore,India</SecondHighlight> for Internship</>,
         },
         {
+            Icon: WorkIcon,
             time: new Date("05/01/2017"),
             type:["work"],
             durationText:"May - June 2017",
@@ -77,11 +89,13 @@ export const timelineContent ={
     ],
     2018:[
         {
+            Icon:ExitIcon,
             time: new Date("05/01/2018"),
             type:["work"],
             title: <><Highlight>Left</Highlight> <SecondHighlight>Software Systems Laboratory, NIT Calicut</SecondHighlight></>,
         },
         {
+            Icon:GraduateIcon,
             time: new Date("05/06/2018"),
             type:["education"],
             title: <><Highlight>Graduated</Highlight> from <SecondHighlight>National Institute of Technology, Calicut</SecondHighlight></>,
@@ -90,9 +104,10 @@ export const timelineContent ={
             Icon: TravelIcon,
             time: new Date("07/07/2017"),
             type:["life"],
-            title: <><Highlight>Moved</Highlight> to <SecondHighlight>Bangalore,India</SecondHighlight> for Work</>,
+            title: <><Highlight>Moved</Highlight> to <SecondHighlight>Bangalore, India</SecondHighlight> for Work</>,
         },
         {
+            Icon: WorkIcon,
             time: new Date("07/08/2018"),
             type:["work"],
             title: <>Started working as <Highlight>Graduate Software Development Engineer</Highlight> at <SecondHighlight>Tesco, Bengaluru</SecondHighlight></>,
@@ -100,11 +115,13 @@ export const timelineContent ={
     ],
     2020:[
         {
+            Icon:VolunteerIcon,
             time: new Date("05/01/2020"),
             type:["work"],
             title:<>Contributed as <Highlight>React Developer</Highlight> to <SecondHighlight>Coronasafe</SecondHighlight> repository</>
         },
         {
+            Icon: WorkIcon,
             time: new Date("05/01/2020"),
             type:["work"],
             title:<>Contributed as <Highlight>Lead Engineer</Highlight> at <SecondHighlight>MarketPearl</SecondHighlight> remotely</>
@@ -112,11 +129,13 @@ export const timelineContent ={
     ],
     2021:[
         {
+            Icon: WorkIcon,
             time: new Date("04/01/2021"),
             type:["work"],
             title:<>Contributed as <Highlight>Frontend Developer</Highlight> to <SecondHighlight>marketsentiment.live</SecondHighlight> </>
         },
         {
+            Icon:ExitIcon,
             time: new Date("07/03/2021"),
             type:["work"],
             title:<><Highlight>Resigned</Highlight> from <SecondHighlight>Tesco, Bengaluru</SecondHighlight></>
@@ -128,11 +147,13 @@ export const timelineContent ={
             title:<><Highlight>Moved</Highlight> to <SecondHighlight>Los Angeles, California</SecondHighlight></>
         },
         {
+            Icon: UniversityIcon,
             time: new Date("08/09/2021"),
             type:["education"],
             title:<>Started <Highlight>Masters in Computer Science</Highlight> at <SecondHighlight>University of Southern California</SecondHighlight></>
         },
         {
+            Icon: WorkIcon,
             time: new Date("08/09/2021"),
             type:["work"],
             title:<>Started working as <Highlight>UI/UX Developer</Highlight> at <SecondHighlight>USC School of Pharmacy</SecondHighlight></>

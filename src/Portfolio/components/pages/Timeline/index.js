@@ -10,6 +10,9 @@ function Timeline(props) {
   return <TimelineContainer id="timeline">
     <TimelineToggler types={enabledTypes} setTypes={setEnabledTypes}/>
     {
+      enabledTypes.length === 0 && <>Select event type</>
+    }
+    {
       Object.keys(timelineContent).map(year => {
         if(timelineContent[year].filter(event=>{
           if(!event.type){
