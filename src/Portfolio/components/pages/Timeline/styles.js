@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import colors from "../../../config/colors";
+import { isMobile } from "../../../utils/common";
 
 export const TimelineContainer = styled.div`
     background:linear-gradient(120deg, #000000ee,#1B0000bb);
@@ -10,9 +11,13 @@ export const TimelineContainer = styled.div`
 
 
 export const YearSection = styled.div`
-    padding-left:30px;
+    padding-left:${isMobile() ? `5px`: `30px`};
     border-width:1px;
     margin-left:100px;
+
+    ${isMobile() && `
+    margin-left:5px;
+    `}
 `;
 export const Year = styled.div`
     width:50px;

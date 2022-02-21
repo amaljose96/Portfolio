@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { isMobile } from "../../../utils/common";
 
 export const ProjectsContainer = styled.div``;
 export const ProjectsTitle = styled.div`
@@ -10,10 +11,19 @@ export const ProjectsTitle = styled.div`
     backdrop-filter:blur(5px);
     background-color:#fff1;
     z-index:10;
+    ${isMobile() && `
+        padding:10px 10px;
+        justify-content:center;
+        flex-direction:column;
+        text-align:center;
+    `}
 `;
 export const ProjectSections = styled.div`
     padding:0px 80px;
     box-sizing:border-box;
+    ${isMobile() && `
+        padding:0px 5px;
+    `}
 `;
 export const ProjectSection = styled.div`
     margin-bottom:30px;
@@ -21,6 +31,9 @@ export const ProjectSection = styled.div`
 export const ProjectSectionTitle = styled.div`
     font-size:24px;
     margin:10px 0px;
+    ${isMobile() && `
+        text-align:center;
+    `}
 `;
 export const ProjectSectionCards = styled.div`
     display:flex;
@@ -36,6 +49,9 @@ export const ProjectCard = styled.div`
     background-color:#fff8;
     width:600px;
     margin:10px;
+    ${isMobile() && `
+        width:100%;
+    `}
     ${props=>props.font && `font-family : ${props.font}`}
 `;
 export const ProjectTitle = styled.div`
