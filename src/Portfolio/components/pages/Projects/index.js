@@ -13,7 +13,7 @@ function Projects() {
             <ProjectSectionCards>
               {
                 section.projects.map(project => {
-                  return <ProjectCard>
+                  return <ProjectCard font={project.font}>
                     {project.link ? <ProjectLinkTitle onClick={() => { window.open(project.link) }} color={project.color}>{project.title}</ProjectLinkTitle> : <ProjectTitle color={project.color}>{project.title}</ProjectTitle>}
                     <ProjectDuration>{project.duration}</ProjectDuration>
                     <ProjectDescription>{project.description}</ProjectDescription>

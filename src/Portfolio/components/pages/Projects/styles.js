@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-export const ProjectsContainer = styled.div`
-`;
+export const ProjectsContainer = styled.div``;
 export const ProjectsTitle = styled.div`
     position:sticky;
     top:0px;
@@ -10,6 +9,7 @@ export const ProjectsTitle = styled.div`
     padding: 30px 80px;
     backdrop-filter:blur(5px);
     background-color:#fff1;
+    z-index:10;
 `;
 export const ProjectSections = styled.div`
     padding:0px 80px;
@@ -36,6 +36,7 @@ export const ProjectCard = styled.div`
     background-color:#fff8;
     width:600px;
     margin:10px;
+    ${props=>props.font && `font-family : ${props.font}`}
 `;
 export const ProjectTitle = styled.div`
     font-size:18px;
@@ -59,12 +60,10 @@ export const ProjectDescription = styled.div`
 margin-top:10px;
     margin-bottom:5px;
     font-size:16px;
-    text-align: justify;
 `;
 export const ProjectContribution = styled.div`
     color:${props => props.color};
     font-size:16px;
-    text-align: justify;
 `;
 
 export const ProjectStack = styled.div`

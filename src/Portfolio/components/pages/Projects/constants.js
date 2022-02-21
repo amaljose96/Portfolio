@@ -1,10 +1,10 @@
 export const skillType = {
-    "frontend": ["React", "HTML", "CSS", "styled-components", "Jest", "Enzyme", "ReactVR","react-google-charts","Tailwind"],
+    "frontend": ["React", "HTML", "CSS", "styled-components", "Jest", "Enzyme", "ReactVR", "react-google-charts", "Tailwind","JQuery"],
     "languages": ["JavaScript", "Python", "Harlowe"],
-    "backend": ["Django", "NodeJS", "Flask","Firebase"],
-    "database": ["Redis", "PostgreSQL", "MongoDB"],
-    "UX": ["Figma"],
-    "AI": ["scikit-learn"]
+    "backend": ["Django", "NodeJS", "Flask", "Firebase","Express","Axios","PHP"],
+    "database": ["Redis", "PostgreSQL", "MongoDB","MySQL"],
+    "UX": ["Figma","Sketch"],
+    "AI": ["scikit-learn","NLTK","Stanford-CoreNLP","Word2Vec","lexrank","Aubio","textblob"]
 }
 export const skillColors = {
     "frontend": "#000d96",
@@ -31,7 +31,7 @@ export const ProjectsData = [{
             title: "TYPS eCases",
             description: "eCases are a part of the Teach Yourself Pharmaceutical Sciences platform by USC School of Pharmacy, aimed at presenting different scenarios to Pharmacy students testing on their response to the situation.",
             contribution: "I worked with the team to develop the eCases using Twine, HTML and CSS. I also developed a platform wherein new eCases can be 'run' instead of built from scratch.",
-            techStack: ["Twine", "Harlowe", "HTML", "CSS"],
+            techStack: ["Twine", "Harlowe", "HTML", "CSS", "JavaScript"],
             duration: "October 2021 - Present",
             color: "#900",
         },
@@ -80,27 +80,136 @@ export const ProjectsData = [{
 {
     title: "Side projects and Volunteering",
     projects: [{
-        title:"Market Sentiment",
-        link:"https://www.marketsentiment.live",
-        description:"Real-time AI Chatter & Sentiment Analyzer, for stock trading. The application analyses Twitter posts about stock tickers and displays the sentiment associated with a stock, hence providing insights for stock trading.",
-        contribution:"Worked on the Frontend application in React using react-google-charts.",
-        techStack:["JavaScript","React","styled-components","react-google-charts"],
-        duration:"April 2021 - July 2021",
-        color:"#319cd1"
-    },{
-        title:"Market Pearl",
-        description:"Sustainability-driven B2B fabric sourcing marketplace and inventory analytics platform serving apparel brands, retailers, and manufacturers. The platform connected fabric manufacturers and retailers from across the world, allowing brands to purchase materials from new fabric suppliers.",
-        contribution:"Worked with the team to build UX wireframes and the POC in React and Firebase.",
-        techStack:["JavaScript","React","styled-components","Firebase"],
-        duration:"May 2020 - November 2020",
-        color:"#fe8590"
-    },{
-        title:"Coronasafe - Suspect Tracker",
-        link:"https://www.coronasafe.in/",
-        description:"Website aimed to be used by Primary Health Centers, Railway and Airport officials to report and maintain records of passengers who have arrived from infected regions and people who have come in contact with confirmed patients and suspected patients.",
-        contribution:"Worked with the team to develop new features for the existing application.",
-        techStack:["JavaScript","React","styled-components","Tailwind"],
-        duration:"April 2020",
-        color:"#b21936"
+        title: "Market Sentiment",
+        link: "https://www.marketsentiment.live",
+        description: "Real-time AI Chatter & Sentiment Analyzer, for stock trading. The application analyses Twitter posts about stock tickers and displays the sentiment associated with a stock, hence providing insights for stock trading.",
+        contribution: "Worked on the Frontend application in React using react-google-charts.",
+        techStack: ["JavaScript", "React", "styled-components", "react-google-charts"],
+        duration: "April 2021 - July 2021",
+        color: "#319cd1"
+    }, {
+        title: "Market Pearl",
+        description: "Sustainability-driven B2B fabric sourcing marketplace and inventory analytics platform serving apparel brands, retailers, and manufacturers. The platform connected fabric manufacturers and retailers from across the world, allowing brands to purchase materials from new fabric suppliers.",
+        contribution: "Worked with the team to build UX wireframes and the POC in React and Firebase.",
+        techStack: ["JavaScript", "React", "styled-components", "Firebase"],
+        duration: "May 2020 - November 2020",
+        color: "#fe8590"
+    }, {
+        title: "Coronasafe - Suspect Tracker",
+        link: "https://www.coronasafe.in/",
+        description: "Website aimed to be used by Primary Health Centers, Railway and Airport officials to report and maintain records of passengers who have arrived from infected regions and people who have come in contact with confirmed patients and suspected patients.",
+        contribution: "Worked with the team to develop new features for the existing application.",
+        techStack: ["JavaScript", "React", "styled-components", "Tailwind"],
+        duration: "April 2020",
+        color: "#b21936"
+    }, {
+        title: "Animapp",
+        description: "Webapp connecting pet owners and veterinarians in Chennai",
+        contribution: "Worked on the doctor facing application to maintain records of injured pets.",
+        techStack: ["PHP","HTML","CSS","JQuery","MySQL","Sketch"],
+        duration: "June 2016",
+        color: "#2a286c"
     }]
+}, {
+    title: "Open Source Contributions",
+    projects: [
+        {
+            title: "Create Styled React Component",
+            link: "https://marketplace.visualstudio.com/items?itemName=amaljose96.create-styled-react-component",
+            description: "VS Code Extension that generates the folder structure and boilerplate code for a new React styled-components based component along with a snapshot test case",
+            techStack: ["JavaScript", "React", "styled-components", "Jest"],
+            duration: "April 2020",
+            color: "#107c10",
+        },
+        {
+            title: "Hera",
+            link: "https://www.npmjs.com/package/hera-monitor",
+            description: "Network log manager for axios and express. This tracks details of all incoming requests, corresponding outgoing API calls and responses for each request like timing and responses - hence helping to figure out slow calls or in error logging.",
+            techStack: ["JavaScript", "Express", "NodeJS", "Axios", "React"],
+            duration: "April 2020",
+            color: "#EA2039"
+        },
+        {
+            title: "Sodux",
+            link: "https://www.npmjs.com/package/sodux-mother",
+            description: "Network log manager for axios and express. This tracks details of all incoming requests, corresponding outgoing API calls and responses for each request like timing and responses - hence helping to figure out slow calls or in error logging.",
+            techStack: ["JavaScript", "Express", "NodeJS", "Axios", "React"],
+            duration: "April 2020",
+            color: "#EA2039"
+        },
+        {
+            title: "Pearls",
+            description: "UI Component Library for React that provides basic components like Buttons, Cards and Tables",
+            techStack: ["JavaScript", "React", "styled-components"],
+            duration: "Unreleased",
+            color: "#EA2039"
+        },
+        {
+            title: "React Template",
+            link:"https://github.com/amaljose96/aj-react-template",
+            description: "A template for React App that has boilerplate code for features like global state management using useContext and useProvider",
+            techStack: ["JavaScript", "React", "styled-components"],
+            color: "#006eed"
+        },
+    ]
+},{
+    title:"Research Projects",
+    projects: [
+        {
+            title:"Natural Language Question Answering System",
+            description:"An NLP system which takes in a passage and a question as an input and finds the sentence from the passage that answers the question. This involves classification of questions as factual and descriptive using an MLP Classifier, preprocessing using NLTK, parsing with Stanford parser and finding similarity using Word2Vec",
+            contribution:"Worked with team of 3 to implement the project and come up with a draft research paper",
+            techStack: ["Python","NLTK","Stanford-CoreNLP","Word2Vec","scikit-learn"],
+            duration:"August 2017 - May 2018"
+        },
+        {
+            title:"Survey Paper on Extractive Text Summarisation Techniques",
+            description:"A survey on the current state of the art text summarisation techniques such as LexRank and TF-IDF",
+            contribution:"Worked with team of 3 to survey existing literature and evaluate different text summarisation techniques",
+            techStack: ["Python","NLTK","lexrank"],
+            duration:"August 2017 - December 2017"
+        },
+        {
+            title:"Chord Detection",
+            description:"A machine learning approach to detecting chords in songs. This involved converting WAV files to features that can be used by the classifier to detect chords.",
+            techStack: ["Python","Aubio","scikit-learn"],
+            duration:"February 2019"
+        },
+        {
+            title:"Paragraph to Rating",
+            description:"An NLP project that takes in a paragraph and gives a 10 star rating based on it's sentiment using NLTK's Vader module",
+            techStack: ["Python","NLTK","textblob"],
+            link:"https://github.com/amaljose96/Paragraph_to_rating",
+            duration:"February 2019"
+        }
+    ]
+},{
+    title:"College projects",
+    projects:[
+        {
+            title:"Clueless '15 and Clueless '16",
+            description:"A picture-based quiz built as a part of Tathva, the technical fest at NIT Calicut",
+            contribution:"My first public facing webpage written in basic HTML, CSS, JQuery and PHP",
+            techStack:["HTML","CSS","JavaScript","JQuery","PHP"],
+            duration:"2015, 2016"
+        },{
+            title:"Tathva '16",
+            description:"Website for the technical fest at NIT Calicut. This displayed events and workshops happening in the fest and allowed students to register for events",
+            contribution:"Worked on the Frontend webpage for the team using JQuery and PHP",
+            techStack:["HTML","CSS","JavaScript","JQuery","PHP"],
+            duration:"October 2016"
+        },{
+            title:"Echoes '18",
+            description:"Website for the cultural fest at IIM Kozhikode for students and professionals to view events and concerts happening at Echoes'18",
+            contribution:"This was my first freelance project which was done using HTML, CSS and JQuery",
+            techStack:["HTML","CSS","JavaScript","JQuery"],
+            duration:"February 2018"
+        },{
+            title:"Ragam '18",
+            description:"Website for the cultural fest at NIT Calicut. Events, Proshows and workshops happening at Ragam '18 were displayed here and students could purchase tickets to attend them.",
+            contribution:"Developed the main website and Campus Ambassador website as a part of the Ragam Website Team",
+            techStack:["HTML","CSS","JavaScript","JQuery","PHP"],
+            duration:"March 2018"
+        },
+    ]
 }]

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import colors from "../../../config/colors";
 
 export const TimelineContainer = styled.div`
-    background:linear-gradient(120deg, #000000ee,#1B0000aa);
+    background:linear-gradient(120deg, #000000ee,#1B0000bb);
     width:100vw;
     box-sizing:border-box;
     color:${colors.background};

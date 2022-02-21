@@ -13,3 +13,6 @@ export function getCookie(cname) {
   }
   return "";
 }
+export function isMobile(){
+  return true;
+}
