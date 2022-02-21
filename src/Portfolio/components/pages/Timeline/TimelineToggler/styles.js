@@ -3,19 +3,20 @@ import styled from "styled-components";
 export const TimelineTogglerContainer = styled.div`
     position:sticky;
     top:0px;
+    left:0px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:20px;
+    padding: 30px 80px;
     margin-bottom:50px;
-    background-color:#fff1;
-    box-shadow:0px 0px 5px 2px #111;
+    background-color:#0001;
     backdrop-filter:blur(5px);
 `;
 
 export const TimelineTitle = styled.div`
     text-align:center;
     font-size:24px;
+    font-weight:bold;
 `;
 
 export const TimelineToggleOptions = styled.div`

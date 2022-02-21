@@ -3,9 +3,11 @@ import colors from "../../config/colors";
 
 export const BackgroundElementsContainer = styled.div`
     position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100vw;
     z-index:-1;
-    bottom:40vh;
-    transform:rotate(-30deg);
     
 `;
 

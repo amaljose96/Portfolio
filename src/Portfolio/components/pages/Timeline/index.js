@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import CalendarEvent from "./CalendarEvent";
 import { timelineContent } from "./constants";
-import { TimelineContainer,YearSection,Year,YearContent,TimelineTitle } from "./styles";
+import { TimelineContainer,YearSection,Year,YearContent } from "./styles";
 import TimelineToggler from "./TimelineToggler";
 import { enhanceTimelineContent } from "./utils";
 
-function Timeline(props) {
+function Timeline() {
   let [enabledTypes,setEnabledTypes] = React.useState(["life","work","education"])
   return <TimelineContainer id="timeline">
     <TimelineToggler types={enabledTypes} setTypes={setEnabledTypes}/>

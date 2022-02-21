@@ -77,7 +77,7 @@ export const timelineContent ={
             Icon: TravelIcon,
             time: new Date("05/01/2017"),
             type:["life"],
-            title: <><Highlight>Moved</Highlight> to <SecondHighlight>Bangalore,India</SecondHighlight> for Internship</>,
+            title: <><Highlight>Moved</Highlight> to <SecondHighlight>Bangalore, India</SecondHighlight> for Internship</>,
         },
         {
             Icon: WorkIcon,
@@ -102,7 +102,7 @@ export const timelineContent ={
         },
         {
             Icon: TravelIcon,
-            time: new Date("07/07/2017"),
+            time: new Date("07/07/2018"),
             type:["life"],
             title: <><Highlight>Moved</Highlight> to <SecondHighlight>Bangalore, India</SecondHighlight> for Work</>,
         },
