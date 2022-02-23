@@ -35,7 +35,6 @@ function Timeline() {
                   })
                   shouldRender=commonTypes.length!==0
                 }
-                debugger
                 if(shouldRender){
                   return <CalendarEvent key={year+"_"+index} {...event}/>
                 }
