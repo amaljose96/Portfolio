@@ -5,7 +5,7 @@ import Timeline from "../pages/Timeline";
 import BackgroundElements from "../BackgroundElements";
 import Projects from "../pages/Projects";
 
-function Body(props) {
+function Body() {
   return <BodyContainer>
     <BackgroundElements/>
     <Landing/>

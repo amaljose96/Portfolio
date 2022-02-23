@@ -6,7 +6,7 @@ import TimelineToggler from "./TimelineToggler";
 import { enhanceTimelineContent } from "./utils";
 
 function Timeline() {
-  let [enabledTypes,setEnabledTypes] = React.useState(["life","work","education"])
+  let [enabledTypes,setEnabledTypes] = React.useState(["work","education"])
   return <TimelineContainer id="timeline">
     <TimelineToggler types={enabledTypes} setTypes={setEnabledTypes}/>
     {
@@ -21,9 +21,9 @@ function Timeline() {
           let commonTypes=event.type.filter(type=>{
             return enabledTypes.includes(type)
           })
-          return commonTypes.length!=0
-        }).length!=0){
-          return <YearSection>
+          return commonTypes.length!==0
+        }).length!==0){
+          return <YearSection key={year}>
           <Year>{year}</Year>
           <YearContent>
             {
@@ -33,13 +33,14 @@ function Timeline() {
                   let commonTypes=event.type.filter(type=>{
                     return enabledTypes.includes(type)
                   })
-                  shouldRender=commonTypes.length!=0
+                  shouldRender=commonTypes.length!==0
                 }
+                debugger
                 if(shouldRender){
-                  return <CalendarEvent {...event}/>
+                  return <CalendarEvent key={year+"_"+index} {...event}/>
                 }
                 else{
-                  return <></>
+                  return false
                 }
                 
               })
@@ -49,7 +50,7 @@ function Timeline() {
         </YearSection>
         }
         else{
-          return <></>
+          return false
         }
        
       })

@@ -9,9 +9,9 @@ function TimelineToggler({types,setTypes}) {
     <TimelineToggleOptions>
       <TimelineToggleOption active={true} onClick={()=>{setTypes(options)}}>All</TimelineToggleOption>
       {
-        options.map(option=>{
-            return <TimelineToggleOption active={types.includes(option)} onClick={()=>{
-              if(types.length==1){
+        options.map((option,index)=>{
+            return <TimelineToggleOption key={"toggle_option_"+index} active={types.includes(option)} onClick={()=>{
+              if(types.length===1){
                 return
               }
               if(types.includes(option)){
