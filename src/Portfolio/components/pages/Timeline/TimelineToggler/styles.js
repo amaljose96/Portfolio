@@ -1,49 +1,45 @@
 import styled from "styled-components";
+import colors from "../../../../config/colors";
 import { isMobile } from "../../../../utils/common";
 
 export const TimelineTogglerContainer = styled.div`
-    position:sticky;
-    top:0px;
-    left:0px;
+    position: sticky;
+    top: 0px;
+    right: 0px;
+    height:50px;
+    width:fit-content;
     display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding: 30px 80px;
-    margin-bottom:50px;
-    background-color:#0001;
-    backdrop-filter:blur(5px);
+    align-items: center;
+    justify-content: flex-end;
+    width:100%;
+    padding-right:5px;
+    box-sizing: border-box;
+    z-index:300;
     ${isMobile() && `
-        padding:10px 10px;
-        justify-content:center;
-        flex-direction:column;
+        justify-content: center;
+        padding:0px;
     `}
 `;
-
-export const TimelineTitle = styled.div`
-    text-align:center;
-    font-size:24px;
-    font-weight:bold;
-    ${isMobile() && `
-        margin-bottom:5px;
-    `}
-`;
-
 export const TimelineToggleOptions = styled.div`
-    display:flex;
+    display:inline-flex;
     align-items:center;
-    
+    border:solid 1px ${colors.shade};
+    border-radius:10px;
+    margin:20px 0px;
+    backdrop-filter:blur(10px);
 `;
 export const TimelineToggleOption = styled.div`
-    background-color:${props=>props.active?"#fff9":"#fff3"};
-    color:#000;
+    background-color:${props => props.active ? colors.background + "88" : "none"};
+    color:${props => props.active ? colors.background : colors.shade};
     transition:all 0.3s;
     user-select:none;
+    font-size:12px;
     padding:5px 15px;
     text-transform:capitalize;
-    border-radius: 10px;
-    margin:0px 5px;
+    border-radius:200px;
+    margin:5px;
     :hover{
         cursor:pointer;
-        color:#fff;
+        color:${colors.secondary};
     }
 `;

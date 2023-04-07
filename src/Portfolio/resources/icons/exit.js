@@ -1,8 +1,8 @@
 import React from 'react';
 import colors from '../../config/colors';
 
-export function ExitIcon({fillColor=colors.text}) {
-    return <svg width="25" height="25" viewBox="0 0 512 512" fill={fillColor} xmlns="http://www.w3.org/2000/svg">
+export function ExitIcon({fillColor=colors.text,size=25}) {
+    return <svg width={size} height={size} viewBox="0 0 512 512" fill={fillColor} xmlns="http://www.w3.org/2000/svg">
       <g>
 	<g>
 		<path d="M501.084,295.982h-17.462c0-8.398,0-13.914,0-22.126c0-5.57-4.515-10.086-10.086-10.086h-5.964

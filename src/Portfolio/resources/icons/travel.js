@@ -1,8 +1,8 @@
 import React from 'react';
 import colors from '../../config/colors';
 
-export function TravelIcon({ fillColor = colors.text }) {
-    return <svg width="25" height="25" viewBox="0 0 959.192 959.192" fill={fillColor} xmlns="http://www.w3.org/2000/svg">
+export function TravelIcon({ fillColor = colors.text,size=25 }) {
+    return <svg width={size} height={size} viewBox="0 0 959.192 959.192" fill={fillColor} xmlns="http://www.w3.org/2000/svg">
         <g>
             <path d="M923.777,2.34l-101.5,46.2c-6.5,3-12.5,7.1-17.6,12.2l-165.4,165.5l-569.6-68.3c-10.3-1.2-20.7,2.3-28,9.7l-31.7,31.7
 		c-16.8,16.8-11.6,45.2,10.1,54.9l408.2,183l-117.2,117.2h-204.7c-9,0-17.6,3.6-24,9.899l-17.1,17.2c-17,17-11.4,45.7,10.6,55.101

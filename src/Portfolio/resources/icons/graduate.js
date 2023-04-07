@@ -1,8 +1,8 @@
 import React from 'react';
 import colors from '../../config/colors';
 
-export function GraduateIcon({fillColor=colors.text}) {
-    return <svg width="25" height="25" viewBox="0 0 97.056 97.056" fill={fillColor} xmlns="http://www.w3.org/2000/svg">
+export function GraduateIcon({fillColor=colors.text,size=25}) {
+    return <svg width={size} height={size} viewBox="0 0 97.056 97.056" fill={fillColor} xmlns="http://www.w3.org/2000/svg">
        <g>
 	<g>
 		<path d="M86.021,43.476L49.929,57.239L13.838,43.675l-2.056,18.832c-0.096,0.774,0.175,1.549,0.732,2.095

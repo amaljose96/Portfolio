@@ -1,8 +1,8 @@
 import React from 'react';
 import colors from '../../config/colors';
 
-export function UniversityIcon({fillColor=colors.text}) {
-    return <svg width="25" height="25" viewBox="0 0 512 512" fill={fillColor} xmlns="http://www.w3.org/2000/svg">
+export function UniversityIcon({fillColor=colors.text,size=25}) {
+    return <svg width={size} height={size} viewBox="0 0 512 512" fill={fillColor} xmlns="http://www.w3.org/2000/svg">
        <g>
 	<g>
 		<polygon points="0,158.694 0,219.615 110.641,219.615 204.562,158.694 		"/>

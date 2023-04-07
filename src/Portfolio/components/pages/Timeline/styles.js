@@ -1,30 +1,30 @@
 import styled from "styled-components";
 import colors from "../../../config/colors";
 import { isMobile } from "../../../utils/common";
+import { elementWidth, numItemsInRow, sideWidth } from "./constants";
 
 export const TimelineContainer = styled.div`
-    background:linear-gradient(120deg, #000000ee,#1B0000bb);
-    width:100vw;
+    background-color:${colors.text}f0;
+    width:100%;
     box-sizing:border-box;
     color:${colors.background};
 `;
-
-
-export const YearSection = styled.div`
-    padding-left:${isMobile() ? `5px`: `30px`};
-    border-width:1px;
-    margin-left:100px;
-
-    ${isMobile() && `
-    margin-left:5px;
-    `}
+export const TimelineItems = styled.div`
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
 `;
-export const Year = styled.div`
-    width:50px;
-    box-sizing:border-box;
-    padding-left:5px;
+export const TimelineRow = styled.div`
+    width:${elementWidth*numItemsInRow + (sideWidth * (numItemsInRow+1))}px;
+    display:flex;
+    align-items:center;
+    justify-content:${props=>props.align==="left"?"flex-start":"flex-end"};
+`;
+
+export const TimelineTitle = styled.div`
+    text-align:center;
+    font-size:56px;
     font-weight:bold;
-    background-color:${colors.background};
-    color:${colors.text};
+    padding-top:70px;
 `;
-export const YearContent = styled.div``;

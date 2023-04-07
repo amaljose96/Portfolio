@@ -1,8 +1,8 @@
 import React from 'react';
 import colors from '../../config/colors';
 
-export function SchoolIcon({ fillColor = colors.text }) {
-    return <svg width="25" height="25" viewBox="0 0 360.699 360.699" fill="none" xmlns="http://www.w3.org/2000/svg">
+export function SchoolIcon({ fillColor = colors.text,size=25 }) {
+    return <svg width={size} height={size} viewBox="0 0 360.699 360.699" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="XMLID_2018_">
             <g id="XMLID_2019_">
                 <g id="XMLID_2020_">

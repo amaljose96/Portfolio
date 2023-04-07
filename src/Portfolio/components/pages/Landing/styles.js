@@ -3,13 +3,20 @@ import { isMobile } from "../../../utils/common";
 
 export const LandingContainer = styled.div`
     height:100vh;
-    width:100vw;
-    padding:${isMobile() ? "5px" : "85px"};
+    width:100%;
     display:flex;
-    align-items:center;
+    align-items:flex-end;
+    justify-content:space-between;
     box-sizing:border-box;
 `;
 export const LandingContent = styled.div`
+    margin-left:10vw;
+    width:40vw;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    flex-direction:column;
+    height:100vh;
 `;
 export const Name = styled.div`
     font-size:108px;
@@ -27,6 +34,7 @@ export const Tagline = styled.div`
     font-size:18px;
     font-weight:light;
     ${isMobile() && `padding:10px;`}
+    box-sizing:border-box;
 `;
 export const Contact = styled.div`
     display:flex;
@@ -41,4 +49,7 @@ export const ContactElement = styled.div`
     :hover{
         opacity:1;
     }
+`;
+export const Image = styled.svg`
+    width:50vw;
 `;

@@ -1,7 +1,8 @@
 import React from "react";
-import { BackgroundElementsContainer} from "./styles";
+import { BackgroundElementsContainer } from "./styles";
 
 import Particles from "react-tsparticles";
+import colors from "../../config/colors";
 
 function BackgroundElements() {
 
@@ -11,68 +12,47 @@ function BackgroundElements() {
       id="tsparticles"
       options={{
         fpsLimit: 120,
-        interactivity: {
-          events: {
-            resize: true,
-          },
-          modes: {
-            bubble: {
-              distance: 400,
-              duration: 2,
-              opacity: 0.8,
-              size: 40,
-            },
-            push: {
-              quantity: 4,
-            },
-            repulse: {
-              distance: 200,
-              duration: 0.4,
-            },
-          },
-        },
         particles: {
           color: {
-            value: "#990000",
-          },
-          links: {
-            color: "#FFCC00",
-            distance: 350,
-            enable: true,
-            opacity: 0.9,
-            width: 1,
-          },
-          collisions: {
-            enable: true,
+            value: [colors.primary, colors.primary + "44", colors.secondary],
           },
           move: {
-            direction: "none",
             enable: true,
-            outMode: "bounce",
             random: true,
-            speed: 2,
-            straight: false,
+            speed: 10,
+            out_mode:"out",
+            "attract": {
+              "enable": true,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
           },
           number: {
-            density: {
-              enable: true,
-              area: 800,
-            },
             value: 10,
           },
           opacity: {
             value: 0.5,
+            anim:{
+              enable:true,
+              opacity_min:0.3,
+              speed:0.1
+            }
           },
           shape: {
             type: "circle",
           },
           size: {
             random: true,
-            value: 8,
+            value: 200,
+            anim:{
+              enable:true,
+              speed:10,
+              size_min:50
+            }
           },
         },
         detectRetina: true,
-      }}/>
+      }} />
   </BackgroundElementsContainer>;
 }
 export default BackgroundElements;
