@@ -39,20 +39,11 @@ function Feedback() {
   }
   function submitForm(){
     setFormState("sending")
-    let body={
-      ...form,
-      isCookieEnabled:navigator.cookieEnabled,
-      memory:navigator.deviceMemory,
-      languages:navigator.languages,
-      touchPoints:navigator.maxTouchPoints,
-      userAgent:navigator.userAgent,
-      isBot:navigator.webdriver
-    }
-    body.Email=body.Email.replace("@","#");
+    form.Email=form.Email.replace("@","#");
     ReactGA.event({
       action: "Send Message",
-      category: body.Email,
-      label: JSON.stringify(body)
+      category: form.Email,
+      label: JSON.stringify(form)
     });
     
     setTimeout(()=>{
