@@ -7,7 +7,7 @@ import { LinkedInIcon } from "../../../resources/icons/linkedin";
 import { LandingContainer, LandingContent, Name, NamePlaque, Tagline, Contact, ContactElement,Image } from "./styles";
 
 function Landing(props) {
-  return <LandingContainer>
+  return <LandingContainer id="home">
     <LandingContent>
       <NamePlaque>
         <Name>Amal Jose</Name>

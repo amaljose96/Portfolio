@@ -192,7 +192,7 @@ if(isMobile()){
 }
 
 export let elementWidth=300;
-export let sideWidth=40;
+export let sideWidth=20;
 export let numItemsInRow = parseInt(((window.innerWidth - 5) - sideWidth) / (elementWidth + sideWidth));
 export let rowHeight=300;
 export let lineWidth=2;

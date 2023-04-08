@@ -39,4 +39,8 @@ export const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar-thumb:active {
     background: ${colors.secondary};
   }
-  }`;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  `;

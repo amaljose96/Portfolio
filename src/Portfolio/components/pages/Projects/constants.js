@@ -26,6 +26,7 @@ export const ProjectsData = [{
             techStack: ["Django", "Python", "HTML", "CSS", "JavaScript", "Figma"],
             duration: "December 2021 - Present",
             color: "#900",
+            font:"AG_Helvetica",
         },
         {
             title: "TYPS eCases",
@@ -34,6 +35,7 @@ export const ProjectsData = [{
             techStack: ["Twine", "Harlowe", "HTML", "CSS", "JavaScript"],
             duration: "October 2021 - Present",
             color: "#900",
+            font:"AG_Helvetica",
         },
         {
             title: "myProduct Promotions",
@@ -42,6 +44,7 @@ export const ProjectsData = [{
             techStack: ["JavaScript", "React", "styled-components", "Jest", "Enzyme", "NodeJS", "Redis"],
             duration: "September 2018 - July 2021",
             color: "#00569f",
+            font:"TESCO Modern",
         },
         {
             title: "Unified Dashboard",
@@ -50,6 +53,7 @@ export const ProjectsData = [{
             techStack: ["JavaScript", "React", "styled-components", "NodeJS", "MongoDB", "Jest", "Enzyme", "Figma"],
             duration: "May 2019 - July 2021",
             color: "#00569f",
+            font:"TESCO Modern",
         },
         {
             title: "myEveryday Conversations",
@@ -58,6 +62,7 @@ export const ProjectsData = [{
             techStack: ["JavaScript", "React", "styled-components", "NodeJS", "PostgreSQL", "Figma"],
             duration: "October 2018 - May 2019",
             color: "#00569f",
+            font:"TESCO Modern",
         },
         {
             title: "Product Group ID Matcher",
@@ -66,6 +71,7 @@ export const ProjectsData = [{
             techStack: ["JavaScript", "React", "styled-components", "Python", "Flask", "scikit-learn"],
             duration: "June 2019",
             color: "#00569f",
+            font:"TESCO Modern",
         },
         {
             title: "Virtual Store",
@@ -74,6 +80,7 @@ export const ProjectsData = [{
             techStack: ["JavaScript", "ReactVR", "NodeJS"],
             duration: "July 2018 - September 2018",
             color: "#00569f",
+            font:"TESCO Modern",
         },
     ]
 },
@@ -86,14 +93,16 @@ export const ProjectsData = [{
         contribution: "Worked on the Frontend application in React using react-google-charts.",
         techStack: ["JavaScript", "React", "styled-components", "react-google-charts"],
         duration: "April 2021 - July 2021",
-        color: "#319cd1"
+        color: "#319cd1",
+        font:"Open Sans",
     }, {
         title: "Market Pearl",
         description: "Sustainability-driven B2B fabric sourcing marketplace and inventory analytics platform serving apparel brands, retailers, and manufacturers. The platform connected fabric manufacturers and retailers from across the world, allowing brands to purchase materials from new fabric suppliers.",
         contribution: "Worked with the team to build UX wireframes and the POC in React and Firebase.",
         techStack: ["JavaScript", "React", "styled-components", "Firebase"],
         duration: "May 2020 - November 2020",
-        color: "#fe8590"
+        color: "#fe8590",
+        font:"Rubik",
     }, {
         title: "Coronasafe - Suspect Tracker",
         link: "https://www.coronasafe.in/",
@@ -101,14 +110,16 @@ export const ProjectsData = [{
         contribution: "Worked with the team to develop new features for the existing application.",
         techStack: ["JavaScript", "React", "styled-components", "Tailwind"],
         duration: "April 2020",
-        color: "#b21936"
+        color: "#b21936",
+        font:"Poppins"
     }, {
         title: "Animapp",
         description: "Webapp connecting pet owners and veterinarians in Chennai",
         contribution: "Worked on the doctor facing application to maintain records of injured pets.",
         techStack: ["PHP","HTML","CSS","JQuery","MySQL","Sketch"],
         duration: "June 2016",
-        color: "#2a286c"
+        color: "#2a286c",
+        font:"Rubik",
     }]
 }, {
     title: "Open Source Contributions",
@@ -160,27 +171,31 @@ export const ProjectsData = [{
             description:"An NLP system which takes in a passage and a question as an input and finds the sentence from the passage that answers the question. This involves classification of questions as factual and descriptive using an MLP Classifier, preprocessing using NLTK, parsing with Stanford parser and finding similarity using Word2Vec",
             contribution:"Worked with team of 3 to implement the project and come up with a draft research paper",
             techStack: ["Python","NLTK","Stanford-CoreNLP","Word2Vec","scikit-learn"],
-            duration:"August 2017 - May 2018"
+            duration:"August 2017 - May 2018",
+            color: "#00008B"
         },
         {
             title:"Survey Paper on Extractive Text Summarisation Techniques",
             description:"A survey on the current state of the art text summarisation techniques such as LexRank and TF-IDF",
             contribution:"Worked with team of 3 to survey existing literature and evaluate different text summarisation techniques",
             techStack: ["Python","NLTK","lexrank"],
-            duration:"August 2017 - December 2017"
+            duration:"August 2017 - December 2017",
+            color:"green"
         },
         {
             title:"Chord Detection",
             description:"A machine learning approach to detecting chords in songs. This involved converting WAV files to features that can be used by the classifier to detect chords.",
             techStack: ["Python","Aubio","scikit-learn"],
-            duration:"February 2019"
+            duration:"February 2019",
+            color:"darkred"
         },
         {
             title:"Paragraph to Rating",
             description:"An NLP project that takes in a paragraph and gives a 10 star rating based on it's sentiment using NLTK's Vader module",
             techStack: ["Python","NLTK","textblob"],
             link:"https://github.com/amaljose96/Paragraph_to_rating",
-            duration:"February 2019"
+            duration:"February 2019",
+            color:"gray"
         }
     ]
 },{
@@ -191,25 +206,32 @@ export const ProjectsData = [{
             description:"A picture-based quiz built as a part of Tathva, the technical fest at NIT Calicut",
             contribution:"My first public facing webpage written in basic HTML, CSS, JQuery and PHP",
             techStack:["HTML","CSS","JavaScript","JQuery","PHP"],
-            duration:"2015, 2016"
+            duration:"2015, 2016",
+            font:"Roboto",
+            color:"limegreen"
         },{
             title:"Tathva '16",
             description:"Website for the technical fest at NIT Calicut. This displayed events and workshops happening in the fest and allowed students to register for events",
             contribution:"Worked on the Frontend webpage for the team using JQuery and PHP",
             techStack:["HTML","CSS","JavaScript","JQuery","PHP"],
-            duration:"October 2016"
+            duration:"October 2016",
+            font:"Nanum Gothic",
+            color:"turquoise",
         },{
             title:"Echoes '18",
             description:"Website for the cultural fest at IIM Kozhikode for students and professionals to view events and concerts happening at Echoes'18",
             contribution:"This was my first freelance project which was done using HTML, CSS and JQuery",
             techStack:["HTML","CSS","JavaScript","JQuery"],
-            duration:"February 2018"
+            duration:"February 2018",
+            font:"Avenir Light",
+            color:"darkred",
         },{
             title:"Ragam '18",
             description:"Website for the cultural fest at NIT Calicut. Events, Proshows and workshops happening at Ragam '18 were displayed here and students could purchase tickets to attend them.",
             contribution:"Developed the main website and Campus Ambassador website as a part of the Ragam Website Team",
             techStack:["HTML","CSS","JavaScript","JQuery","PHP"],
-            duration:"March 2018"
+            duration:"March 2018",
+            color:"orange",
         },
     ]
 }]

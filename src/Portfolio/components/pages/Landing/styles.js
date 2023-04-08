@@ -8,6 +8,7 @@ export const LandingContainer = styled.div`
     align-items:flex-end;
     justify-content:space-between;
     box-sizing:border-box;
+    ${isMobile() && `flex-direction:column;`}
 `;
 export const LandingContent = styled.div`
     margin-left:10vw;
@@ -17,6 +18,7 @@ export const LandingContent = styled.div`
     justify-content:center;
     flex-direction:column;
     height:100vh;
+    ${isMobile() && `width:100%; height:70vh;align-items:center;`}
 `;
 export const Name = styled.div`
     font-size:108px;
@@ -52,4 +54,5 @@ export const ContactElement = styled.div`
 `;
 export const Image = styled.svg`
     width:50vw;
+    ${isMobile() && `width:auto; height:30vh;align-items:center;`}
 `;
