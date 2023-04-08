@@ -28,7 +28,7 @@ export const ProjectSection = styled.div`
 export const ProjectSectionTitle = styled.div`
     font-size:28px;
     text-align:center;
-    padding:30px 0px;
+    padding:30px 20px;
     position:sticky;
     top:0;
     left:0;
@@ -36,6 +36,7 @@ export const ProjectSectionTitle = styled.div`
     margin-bottom:1px;
     background-color:${colors.background};
     border-radius:20px 20px 0px 0px;
+
 `;
 export const ProjectSectionCards = styled.div`
     

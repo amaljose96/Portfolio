@@ -47,6 +47,11 @@ export const NavigationOption =styled.div`
         
         background-color:${colors.background}44;
     }
+    ${props=>props.active && `
+    
+    background-color:${colors.primary};
+    color:${colors.secondary};
+    `}
 `;
 export const NavigationOptionLabel =styled.div`
     width:${props=>props.open ? "fit-content" : "0px"};

@@ -8,29 +8,20 @@ import SidePiece from "./SidePiece";
 import { isMobile } from "../../../utils/common";
 
 
-function Timeline() {
+function Timeline({scroll=0}) {
   let [enabledTypes, setEnabledTypes] = React.useState(["work", "education"]);
   const timelineScroll = React.useRef();
 
-  const [scrollTop, setScrollTop] = React.useState(0);
+  let scrollTop = 0;
+  let trigger = timelineScroll?.current?.offsetTop-window.innerHeight/(isMobile() ? 3 : 2);
+  if (window.scrollY < trigger) {
+    scrollTop=0;
+  }
+  else {
+    scrollTop=window.scrollY - trigger;
+  }
+  
 
-  React.useEffect(() => {
-    const handleScroll = () => {
-      let trigger = timelineScroll.current.offsetTop-window.innerHeight/(isMobile() ? 3 : 2);
-      if (window.scrollY < trigger) {
-        setScrollTop(0);
-      }
-      else {
-        setScrollTop(window.scrollY - trigger);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [timelineScroll]);
-
-  console.log(scrollTop)
 
   let filteredContent = timelineContent.filter(event => {
     if (!event.type) {

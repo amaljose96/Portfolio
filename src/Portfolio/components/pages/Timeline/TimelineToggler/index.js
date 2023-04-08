@@ -1,5 +1,5 @@
 import React from "react";
-import { TimelineTitle, TogglerLift, TimelineTogglerContainer, TimelineToggleOptions, TimelineToggleOption } from "./styles";
+import { TimelineTogglerContainer, TimelineToggleOptions, TimelineToggleOption } from "./styles";
 const options = ["life", "education", "work"]
 
 function TimelineToggler({ types, setTypes }) {

@@ -11,7 +11,6 @@ function createGetPercent(percentStart, scrollPerElement){
         }
         else{
             let t= (scroll-percentStart)/(percentEnd-percentStart);
-            console.log(t,t*t)
             return t
         }
     }
@@ -37,7 +36,6 @@ export function generateInteractiveTimeline(timelineItems) {
 
     let scrollPerElement = scrollTrackLength/numberOfElements;
     let currentScroll=0;
-    console.log("SCROLL: NumberOfElements:"+numberOfElements+" | TrackLength:"+scrollTrackLength+" | ScrollPerElement:"+scrollPerElement)
     let enhancedRows=rows.map((row,rowIndex)=>{
         let enhancedRow=[];
         let starter={};

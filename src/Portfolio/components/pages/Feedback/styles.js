@@ -8,6 +8,7 @@ export const FeedbackContainer = styled.div`
     align-items:center;
     justify-content:center;
     flex-direction:column;
+    min-height:100vh;
 `;
 
 
@@ -23,7 +24,7 @@ export const FeedbackDescription =styled.div`
     padding:50px;
     text-align:center;
 `;
-export const FeedbackForm =styled.div`
+export const FeedbackForm =styled.form`
     width:50vw;
     margin:20px 0px;
     ${isMobile() && `width:95vw;`}

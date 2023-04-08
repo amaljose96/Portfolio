@@ -1,16 +1,10 @@
 import React from "react";
 import { SidePieceContainer } from "./styles";
 import { sideWidth, rowHeight, lineWidth,trainColor,trackColor } from "../constants";
-import colors from "../../../../config/colors";
 
 function SidePiece({ shape, percent, forward }) {
   let width = sideWidth;
   let height = rowHeight;
-  let horizontalFill = percent > 0.5 ? 1 : percent * 2;
-  let verticalFill = percent > 0.5 ? (percent - 0.5) * 2 : 0;
-  if (percent > 0 && percent < 1) {
-    console.log("Shape", shape, horizontalFill, verticalFill)
-  }
   if (shape === "line") {
     let fillLength = percent * width;
     return <SidePieceContainer percent={percent}>
