@@ -28,13 +28,14 @@ function Navigator({ scroll }) {
     }}
   >
     <NavigatorBar>
-      {options.map((option,index) => {
+      {options.map((option, index) => {
+        scroll = Math.ceil(scroll)
         let scrollStart = document.getElementById(option.href)?.offsetTop;
-        let scrollEnd = document.getElementById(options[index+1]?.href)?.offsetTop;
-        if(index == options.length-1){
-          scrollEnd=Infinity;
+        let scrollEnd = document.getElementById(options[index + 1]?.href)?.offsetTop;
+        if (index == options.length - 1) {
+          scrollEnd = Infinity;
         }
-        let isOptionActive = scroll>=(scrollStart) && scroll <(scrollEnd);
+        let isOptionActive = scrollStart === undefined ? index === 0 : scroll >= (scrollStart) && scroll < (scrollEnd);
         return <NavigationOption active={isOptionActive} open={showLabels} onClick={() => {
           document.getElementById(option.href).scrollIntoView({
             behavior: 'smooth'
@@ -46,7 +47,7 @@ function Navigator({ scroll }) {
           });
         }}>
           <NavigationIcon>
-            <option.icon size={20} fillColor={isOptionActive ? colors.secondary: colors.background} />
+            <option.icon size={20} fillColor={isOptionActive ? colors.secondary : colors.background} />
           </NavigationIcon>
           <NavigationOptionLabel open={showLabels}>{option.label}</NavigationOptionLabel>
         </NavigationOption>
