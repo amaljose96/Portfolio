@@ -9,16 +9,16 @@ import ReactGA from "../../../config/ga";
 
 function Feedback() {
   const [form, setForm] = React.useState({
-    "Name": "Test",
-    "Email": "amaljose96@gamil.com",
-    "Phone": "2135739739",
-    "Message": "Amal"
+    "Name": "",
+    "Email": "",
+    "Phone": "",
+    "Message": ""
   });
   const [isValid, setIsValid] = React.useState({
-    "Name": true,
-    "Email": true,
-    "Phone": true,
-    "Message": true
+    "Name": null,
+    "Email": null,
+    "Phone": null,
+    "Message": null
   });
   const [formState,setFormState] =React.useState("unsent");
   function updateField(value,setValue){
