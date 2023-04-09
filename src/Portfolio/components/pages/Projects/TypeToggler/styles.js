@@ -4,7 +4,7 @@ import { isMobile } from "../../../../utils/common";
 
 export const TypeTogglerContainer = styled.div`
     position: sticky;
-    top: 15px;
+    top: 10px;
     right: 0px;
     height:50px;
     width:fit-content;
@@ -19,6 +19,7 @@ export const TypeTogglerContainer = styled.div`
         justify-content: center;
         padding:0px;
         max-width:100vw;
+        margin-top:30px;
     `}
 `;
 export const TypeToggleOptions = styled.div`
@@ -30,6 +31,9 @@ export const TypeToggleOptions = styled.div`
     backdrop-filter:blur(10px);
     flex-wrap: wrap;
     justify-content:center;
+    ${isMobile() && `
+       border-radius:0px;
+    `}
 `;
 export const TypeToggleOption = styled.div`
     background-color:${props => props.active ? colors.background + "ee" : "none"};

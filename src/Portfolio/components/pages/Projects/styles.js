@@ -28,14 +28,17 @@ export const ProjectSection = styled.div`
 export const ProjectSectionTitle = styled.div`
     font-size:28px;
     text-align:center;
-    padding:30px 20px;
+    padding:20px 20px;
+   
+    margin-bottom:1px;
+    background-color:${colors.background};
+    border-radius:20px 20px 0px 0px;
+    ${!isMobile() && `
     position:sticky;
     top:0;
     left:0;
     z-index:10;
-    margin-bottom:1px;
-    background-color:${colors.background};
-    border-radius:20px 20px 0px 0px;
+    `}
 
 `;
 export const ProjectSectionCards = styled.div`
