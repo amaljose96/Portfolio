@@ -41,6 +41,8 @@ const colors = {
           primary: getCookie("primary") || "#00FFFF",
           text: getCookie("text") || "#00FF00",
           background: getCookie("background") || "#333333",
+          secondary:  getCookie("secondary") || "#FF00FF",
+          shade:getCookie("shade") || "#555555",
         }
       : {};
   })(),

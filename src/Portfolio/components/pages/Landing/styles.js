@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { isMobile } from "../../../utils/common";
+import colors from "../../../config/colors";
 
 export const LandingContainer = styled.div`
     height:100vh;
@@ -23,7 +24,7 @@ export const LandingContent = styled.div`
 export const Name = styled.div`
     font-size:108px;
     font-weight:bold;
-    color:#900;
+    color:${colors.primary};
 `;
 
 
