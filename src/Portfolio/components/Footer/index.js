@@ -29,7 +29,7 @@ function Footer() {
   
   return <FooterContainer>
     <ContactLine>amaljose96@gmail.com | +1 (213)573-9739 | © 2023 </ContactLine>
-    <GitLine>{gitInfo.commit} commit has been alive for {aliveText} since gitInfo.time</GitLine>
+    <GitLine>{gitInfo.commit} commit has been alive for {aliveText} since {gitInfo.time}</GitLine>
     </FooterContainer>;
 }
 export default Footer;
