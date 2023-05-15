@@ -5,7 +5,6 @@ import TextInput from "../../TextInput";
 import { ButtonSpacer } from "../../Button/styles";
 import Button from "../../Button";
 import { validateEmail, validatePhone, validateText } from "../../TextInput/utils";
-import ReactGA from "../../../config/ga";
 
 function Feedback() {
   const [form, setForm] = React.useState({
@@ -29,7 +28,14 @@ function Feedback() {
         ipinfoText = ipinfoText + key + ":" + info[key].toString() + ` `;
       });
       setIpInfo(ipinfoText)
-      setNavigatorInfo(`isCookieEnabled:${navigator.cookieEnabled.toString()} memory:${navigator.deviceMemory.toString()} languages:${navigator.languages.toString()} touchPoints:${navigator.maxTouchPoints.toString()} userAgent:${navigator.userAgent.toString()} isBot:${navigator.webdriver.toString()}`)
+      let navigatorKeys=["cookieEnabled","deviceMemory","languages","touchPoints","userAgent","webdriver"]
+      let navigatorText = ""
+      navigatorKeys.forEach(key => {
+        if(navigator[key]){
+          navigatorText = navigatorText + key + ":" + navigator[key].toString() +" ";
+        }
+      })
+      setNavigatorInfo(navigatorText)
     })
   },[])
   function updateField(value, setValue) {

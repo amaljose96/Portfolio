@@ -15,10 +15,12 @@ const execSyncWrapper = (command) => {
 const main = () => {
   let time = new Date().toString().split(' ').slice(1,5).join(' '); 
   let commit = execSyncWrapper('git rev-parse --short=7 HEAD');
+  let message = execSyncWrapper('git log --format=%B -n 1 $(git log -1 --pretty=format:"%h")')
 
   const obj = {
     time,
-    commit
+    commit,
+    message
   };
 
   const filePath = path.resolve('src/Portfolio/components/Footer', 'gitinfo.json');

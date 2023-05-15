@@ -18,13 +18,13 @@ function getTransitionColor(start,end,percent){
   let rg = ((+sg)*(1-percent) + (+eg)*percent).toString(16).split(".")[0];
   let rb = ((+sb)*(1-percent) + (+eb)*percent).toString(16).split(".")[0];
   let ra = ((+sa)*(1-percent) + (+ea)*percent).toString(16).split(".")[0];
-  if (rr.length == 1)
+  if (rr.length === 1)
     rr = "0" + rr;
-  if (rg.length == 1)
+  if (rg.length === 1)
     rg = "0" + rg;
-  if (rb.length == 1)
+  if (rb.length === 1)
     rb = "0" + rb;
-  if (ra.length == 1)
+  if (ra.length === 1)
     ra = "0" + ra;
   return "#"+rr+rg+rb+ra;
 }

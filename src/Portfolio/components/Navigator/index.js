@@ -32,7 +32,7 @@ function Navigator({ scroll }) {
         scroll = Math.ceil(scroll)
         let scrollStart = document.getElementById(option.href)?.offsetTop;
         let scrollEnd = document.getElementById(options[index + 1]?.href)?.offsetTop;
-        if (index == options.length - 1) {
+        if (index === options.length - 1) {
           scrollEnd = Infinity;
         }
         let isOptionActive = scrollStart === undefined ? index === 0 : scroll >= (scrollStart) && scroll < (scrollEnd);

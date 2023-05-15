@@ -4,11 +4,11 @@ import { FacebookIcon } from "../../../resources/icons/facebook";
 import { GithubIcon } from "../../../resources/icons/github";
 import { InstagramIcon } from "../../../resources/icons/instagram";
 import { LinkedInIcon } from "../../../resources/icons/linkedin";
-import { LandingContainer, LandingContent, Name, NamePlaque, Tagline, Contact, ContactElement,Image } from "./styles";
+import { LandingContainer, LandingContent, Name, NamePlaque, Tagline, Contact, ContactElement } from "./styles";
 import { MyFace } from "../../../resources/icons/myFace";
 import { TwitterIcon } from "../../../resources/icons/twitter";
 
-function Landing(props) {
+function Landing() {
   return <LandingContainer id="home">
     <LandingContent>
       <NamePlaque>

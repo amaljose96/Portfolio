@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import colors from "../../../config/colors";
-import { isMobile } from "../../../utils/common";
 import { elementWidth, numItemsInRow, sideWidth } from "./constants";
 
 export const TimelineContainer = styled.div`

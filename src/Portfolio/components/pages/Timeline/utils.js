@@ -95,7 +95,7 @@ export function generateInteractiveTimeline(timelineItems) {
                 ...element,
                 getPercent:createGetPercent(currentScroll,scrollPerElement)
             }
-            if(element.shape!="space"){
+            if(element.shape!=="space"){
                 currentScroll=currentScroll+scrollPerElement;
             }
             return scrolledElement;
