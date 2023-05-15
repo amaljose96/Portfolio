@@ -13,6 +13,10 @@ export const ContactLine = styled.div`
 font-size:16px;
 `;
 export const GitLine = styled.div`
-font-size:8px;
+font-size:10px;
 color:${colors.background}55;
+`;
+export const CommitMessage = styled.div`
+    font-size:8px;
+    color:${colors.background}33;
 `;

@@ -1,5 +1,5 @@
 import React from "react";
-import { FooterContainer,ContactLine,GitLine } from "./styles";
+import { FooterContainer,ContactLine,GitLine,CommitMessage } from "./styles";
 import gitInfo from "./gitinfo.json";
 
 function secondsToDhms(duration) {
@@ -31,7 +31,8 @@ function Footer() {
   
   return <FooterContainer>
     <ContactLine>amaljose96@gmail.com | +1 (213)573-9739 | © 2023 </ContactLine>
-    <GitLine>{gitInfo.commit} commit ({gitInfo.message}) has been alive for {aliveText} since {gitInfo.time}</GitLine>
+    <GitLine>{gitInfo.commit} for {aliveText} since {gitInfo.time}</GitLine>
+    <CommitMessage>{gitInfo.message}</CommitMessage>
     </FooterContainer>;
 }
 export default Footer;
