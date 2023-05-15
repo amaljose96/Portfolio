@@ -3,7 +3,7 @@ export function validateText(value){
     if(value.length===0){
         return null;
     }
-    let safeRegex = /[!#$%^&*()_+\-=\[\]{};':"\\|<>\/?]+/
+    let safeRegex = /[!$%^&*_+\-=\[\]{};\\|<>\/]+/
     let test= value.length > 0 && !safeRegex.test(value)
     return test
 }

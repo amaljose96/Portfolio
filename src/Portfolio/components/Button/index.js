@@ -8,6 +8,7 @@ function Button({
   variant = "primary",
   formState = "unsent",
   disabled = false,
+  type="none",
 }) {
   let buttonColors = {
     "primary": {

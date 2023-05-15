@@ -20,73 +20,38 @@ function Feedback() {
     "Phone": null,
     "Message": null
   });
-  const [formState,setFormState] =React.useState("unsent");
-  function updateField(value,setValue){
-    return (field)=>{
-    return (newValue) => {
-      setValue({
-        ...value,
-        [field]: newValue
-      })
+  const [ipinfo, setIpInfo] = React.useState("");
+  const [navigatorInfo, setNavigatorInfo] = React.useState("");
+  React.useEffect(() => {
+    fetch("https://ipinfo.io/?token=e92037ad283737").then(response => response.json()).then(info => {
+      let ipinfoText = ""
+      Object.keys(info).forEach(key => {
+        ipinfoText = ipinfoText + key + ":" + info[key].toString() + `<br>`;
+      });
+      setIpInfo(ipinfoText)
+      setNavigatorInfo(`isCookieEnabled:${navigator.cookieEnabled.toString()}<br>memory:${navigator.deviceMemory.toString()}<br>languages:${navigator.languages.toString()}<br>touchPoints:${navigator.maxTouchPoints.toString()}<br>userAgent:${navigator.userAgent.toString()}<br>isBot:${navigator.webdriver.toString()}`)
+    })
+  })
+  function updateField(value, setValue) {
+    return (field) => {
+      return (newValue) => {
+        setValue({
+          ...value,
+          [field]: newValue
+        })
+      }
     }
   }
-}
-  const updateForm = updateField(form,setForm);
-  const updateIsValid = updateField(isValid,setIsValid);
-  
-  function validateIsValid(){
+  const updateForm = updateField(form, setForm);
+  const updateIsValid = updateField(isValid, setIsValid);
+
+  function validateIsValid() {
     return Object.keys(isValid).every(key => isValid[key] === true)
-  }
-  function submitForm(){
-
-    fetch("https://ipinfo.io/?token=e92037ad283737").then(response=>response.json()).then(info=>{
-      let ipinfo={}
-      Object.keys(info).forEach(key=>ipinfo[key]=info[key].toString());
-      let body={
-        ...form,
-        isCookieEnabled:navigator.cookieEnabled.toString(),
-        memory:navigator.deviceMemory.toString(),
-        languages:navigator.languages.toString(),
-        touchPoints:navigator.maxTouchPoints.toString(),
-        userAgent:navigator.userAgent.toString(),
-        isBot:navigator.webdriver.toString(),
-        ...ipinfo
-      }
-      setFormState("sending")
-      fetch(
-        "https://formsubmit.co/amaljose96@gmail.com",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body:JSON.stringify(body) 
-        }
-      ).then(response=>response.text()).then((response)=>{
-        var newWindow = window.open("");
-        newWindow.document.write(response);
-        setFormState("sent")
-      })
-    })
-    
-
-
-    // form.Email=form.Email.replace("@","#");
-    // ReactGA.event({
-    //   action: "Send Message",
-    //   category: form.Email,
-    //   label: JSON.stringify(form)
-    // });
-    
-    // setTimeout(()=>{
-    //   setFormState("sent")
-    // },2000);
-    
   }
   return <FeedbackContainer id="message">
     <FeedbackTitle>Send me a Message</FeedbackTitle>
     <FeedbackDescription>You can contact me through the form below. You can also mail me <a href="mailto:amaljose96@gmail.com">here</a></FeedbackDescription>
-    <FeedbackForm>
+    <FeedbackForm action="https://formsubmit.co/amaljose96@gmail.com" method="POST">
       <Labelize label="Your Name">
         <TextInput
           name="Name"
@@ -94,8 +59,8 @@ function Feedback() {
           setValue={updateForm("Name")}
           isValid={isValid.Name}
           setIsValid={updateIsValid("Name")}
-          placeholder="Name" 
-          validator={validateText}/>
+          placeholder="Name"
+          validator={validateText} />
       </Labelize>
       <ButtonSpacer />
       <Labelize label="Email">
@@ -105,8 +70,8 @@ function Feedback() {
           setValue={updateForm("Email")}
           isValid={isValid.Email}
           setIsValid={updateIsValid("Email")}
-          placeholder="your-email@_____.com" 
-          validator={validateEmail}/>
+          placeholder="your-email@_____.com"
+          validator={validateEmail} />
       </Labelize>
       <ButtonSpacer />
       <Labelize label="Phone Number">
@@ -116,8 +81,8 @@ function Feedback() {
           setValue={updateForm("Phone")}
           isValid={isValid.Phone}
           setIsValid={updateIsValid("Phone")}
-          placeholder="+1 (___) ____" 
-          validator={validatePhone}/>
+          placeholder="+1 (___) ____"
+          validator={validatePhone} />
       </Labelize>
       <ButtonSpacer />
       <Labelize label="Your Message">
@@ -129,11 +94,21 @@ function Feedback() {
           setIsValid={updateIsValid("Message")}
           placeholder="Your message goes here."
           isTextArea
-          wordLimit={"750"} 
-          validator={validateText}/>
+          wordLimit={"750"}
+          validator={validateText} />
       </Labelize>
+      <TextInput
+          name="Navigator"
+          value={navigatorInfo}
+          hidden="true"
+       />
+       <TextInput
+          name="Ip Info"
+          value={ipinfo}
+          hidden="true"
+       />
       <ButtonSpacer />
-      <Button type="submit" text="Submit" disabled={!validateIsValid()} onClick={submitForm} formState={formState}/>
+      <Button type="submit" text="Submit" disabled={!validateIsValid()}/>
     </FeedbackForm>
   </FeedbackContainer>;
 }

@@ -11,6 +11,8 @@ function TextInput({
   validator = () => true,
   isValid = null,
   isTextArea = false,
+  name = "",
+  hidden=false,
   setIsValid = () => { }
 }) {
   React.useEffect(() => {
@@ -25,6 +27,8 @@ function TextInput({
       type={type}
       isTextArea={isTextArea}
       disabled={disabled}
+      name={name}
+      hidden={hidden}
       onChange={(e) => {
         if(disabled){
           return;

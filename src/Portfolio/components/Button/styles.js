@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import colors from "../../config/colors";
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.button`
+appearance:none;
     background-color: ${props => props.backgroundColor};
     border:solid 1px ${props=>props.backgroundColor};
     color: ${props => props.color};
