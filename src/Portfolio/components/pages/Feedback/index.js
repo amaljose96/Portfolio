@@ -40,6 +40,8 @@ function Feedback() {
   function submitForm(){
 
     fetch("https://ipinfo.io/?token=e92037ad283737").then(response=>response.json()).then(info=>{
+      let ipinfo={}
+      Object.keys(info).forEach(key=>ipinfo[key]=info[key].toString());
       let body={
         ...form,
         isCookieEnabled:navigator.cookieEnabled.toString(),
@@ -48,7 +50,7 @@ function Feedback() {
         touchPoints:navigator.maxTouchPoints.toString(),
         userAgent:navigator.userAgent.toString(),
         isBot:navigator.webdriver.toString(),
-        ...info
+        ...ipinfo
       }
       setFormState("sending")
       fetch(
@@ -60,7 +62,9 @@ function Feedback() {
           },
           body:JSON.stringify(body) 
         }
-      ).then(()=>{
+      ).then(response=>response.text()).then((response)=>{
+        var newWindow = window.open("");
+        newWindow.document.write(response);
         setFormState("sent")
       })
     })
