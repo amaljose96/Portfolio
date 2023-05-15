@@ -9,7 +9,7 @@ function TextInput({
   isValid = null,
   isTextArea = false,
   name = "",
-  type="text"
+  type="text",
   setIsValid = () => { }
 }) {
   
