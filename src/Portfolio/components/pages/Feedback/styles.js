@@ -17,7 +17,7 @@ export const FeedbackTitle =styled.div`
     font-size:78px;
     font-weight:bold;
     padding-top:70px;
-    // font-family:TildaGrande;
+    font-family:TildaGrande;
 `;
 export const FeedbackDescription =styled.div`
     font-size:18px;
