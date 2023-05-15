@@ -14,5 +14,5 @@ font-size:16px;
 `;
 export const GitLine = styled.div`
 font-size:10px;
-color:${colors.background}33;
+color:${colors.background}55;
 `;
