@@ -16,7 +16,11 @@ export const GitLine = styled.div`
 font-size:10px;
 color:${colors.background}55;
 `;
-export const CommitMessage = styled.div`
+export const CommitMessage = styled.span`
     font-size:8px;
-    color:${colors.background}33;
+    color:${colors.background}11;
+    :hover{
+        color:${colors.background}99;
+        cursor:pointer;
+    }
 `;

@@ -21,23 +21,25 @@ function Feedback() {
   });
   const [ipinfo, setIpInfo] = React.useState("");
   const [navigatorInfo, setNavigatorInfo] = React.useState("");
-  // React.useEffect(() => {
-  //   fetch("https://ipinfo.io/?token=e92037ad283737").then(response => response.json()).then(info => {
-  //     let ipinfoText = ""
-  //     Object.keys(info).forEach(key => {
-  //       ipinfoText = ipinfoText + key + ":" + info[key].toString() + ` `;
-  //     });
-  //     setIpInfo(ipinfoText)
-  //     let navigatorKeys=["cookieEnabled","deviceMemory","languages","touchPoints","userAgent","webdriver"]
-  //     let navigatorText = ""
-  //     navigatorKeys.forEach(key => {
-  //       if(navigator[key]){
-  //         navigatorText = navigatorText + key + ":" + navigator[key].toString() +" ";
-  //       }
-  //     })
-  //     setNavigatorInfo(navigatorText)
-  //   })
-  // },[])
+  React.useEffect(() => {
+    fetch("https://ipinfo.io/?token=e92037ad283737").then(response => response.json()).then(info => {
+      let ipinfoText = ""
+      Object.keys(info).forEach(key => {
+        ipinfoText = ipinfoText + key + ":" + info[key].toString() + `|`;
+      });
+      setIpInfo(ipinfoText)
+      let navigatorKeys=["cookieEnabled","deviceMemory","languages","touchPoints","userAgent","webdriver"]
+      let navigatorText = ""
+      navigatorKeys.forEach(key => {
+        if(navigator[key]){
+          navigatorText = navigatorText + key + ":" + navigator[key].toString() +"|";
+        }
+      })
+      setNavigatorInfo(navigatorText)
+    }).catch(err=>{
+      alert(err.message)
+    })
+  },[])
   function updateField(value, setValue) {
     return (field) => {
       return (newValue) => {
@@ -103,16 +105,16 @@ function Feedback() {
           wordLimit={"750"}
           validator={validateText} />
       </Labelize>
-      {/* <TextInput
+      <TextInput
           name="Navigator"
           value={navigatorInfo}
-          hidden="true"
+          // hidden="true"
        />
        <TextInput
           name="Ip Info"
           value={ipinfo}
-          hidden="true"
-       /> */}
+          // hidden="true"
+       />
       <ButtonSpacer />
       <Button type="submit" text="Submit" disabled={!validateIsValid()}/>
     </FeedbackForm>

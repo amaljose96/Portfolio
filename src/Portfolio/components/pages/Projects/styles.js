@@ -13,7 +13,7 @@ export const ProjectsTitle = styled.div`
     padding-top:70px;
 `;
 export const ProjectSections = styled.div`
-    padding:0px 80px;
+    padding:0px 15vw;
     box-sizing:border-box;
     ${isMobile() && `
         padding:0px 5px;

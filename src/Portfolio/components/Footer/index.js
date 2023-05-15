@@ -31,10 +31,9 @@ function Footer() {
   
   return <FooterContainer>
     <ContactLine>amaljose96@gmail.com | +1 (213)573-9739 | © 2023 </ContactLine>
-    <GitLine>{gitInfo.commit} alive for {aliveText} since {gitInfo.time}</GitLine>
-    <CommitMessage onClick={()=>{
+    <GitLine>{gitInfo.commit} alive for {aliveText} since {gitInfo.time} |  <CommitMessage onClick={()=>{
       window.open("https://github.com/amaljose96/portfolio/commit/"+gitInfo.commit,"blank");
-    }}>{gitInfo.message}</CommitMessage>
+    }}>{gitInfo.message}</CommitMessage></GitLine>
     </FooterContainer>;
 }
 export default Footer;
