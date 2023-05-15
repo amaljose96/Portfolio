@@ -103,7 +103,7 @@ function Feedback() {
           wordLimit={"750"}
           validator={validateText} />
       </Labelize>
-      <TextInput
+      {/* <TextInput
           name="Navigator"
           value={navigatorInfo}
           hidden="true"
@@ -112,7 +112,7 @@ function Feedback() {
           name="Ip Info"
           value={ipinfo}
           hidden="true"
-       />
+       /> */}
       <ButtonSpacer />
       <Button type="submit" text="Submit" disabled={!validateIsValid()}/>
     </FeedbackForm>
