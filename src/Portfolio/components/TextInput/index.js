@@ -9,7 +9,7 @@ function TextInput({
   isValid = null,
   isTextArea = false,
   name = "",
-  hidden=false,
+  type="text"
   setIsValid = () => { }
 }) {
   
@@ -22,7 +22,7 @@ function TextInput({
       placeholder={placeholder}
       isTextArea={isTextArea}
       name={name}
-      hidden={hidden}
+      type={type}
       onChange={(e) => {
         setValue(e.target.value);
         setIsValid(validator(e.target.value));

@@ -19,27 +19,6 @@ function Feedback() {
     "Phone": null,
     "Message": null
   });
-  const [ipinfo, setIpInfo] = React.useState("");
-  const [navigatorInfo, setNavigatorInfo] = React.useState("");
-  React.useEffect(() => {
-    fetch("https://ipinfo.io/?token=e92037ad283737").then(response => response.json()).then(info => {
-      let ipinfoText = ""
-      Object.keys(info).forEach(key => {
-        ipinfoText = ipinfoText + key + ":" + info[key].toString() + `<br>`;
-      });
-      setIpInfo(ipinfoText)
-      let navigatorKeys=["cookieEnabled","deviceMemory","languages","touchPoints","userAgent","webdriver"]
-      let navigatorText = ""
-      navigatorKeys.forEach(key => {
-        if(navigator[key]){
-          navigatorText = navigatorText + key + ":" + navigator[key].toString() +"<br>";
-        }
-      })
-      setNavigatorInfo(navigatorText)
-    }).catch(err=>{
-      alert(err.message)
-    })
-  },[])
   function updateField(value, setValue) {
     return (field) => {
       return (newValue) => {
@@ -59,7 +38,7 @@ function Feedback() {
   return <FeedbackContainer id="message">
     <FeedbackTitle>Send me a Message</FeedbackTitle>
     <FeedbackDescription>You can contact me through the form below. You can also mail me <a href="mailto:amaljose96@gmail.com">here</a></FeedbackDescription>
-    <FeedbackForm action="https://formsubmit.co/amaljose96@gmail.com" method="POST">
+    <FeedbackForm action="https://formsubmit.io/send/amaljose96@gmail.com" method="POST" ac>
       <Labelize label="Your Name">
         <TextInput
           name="Name"
@@ -75,6 +54,7 @@ function Feedback() {
         <TextInput
           name="Email"
           value={form.Email}
+          type={"email"}
           setValue={updateForm("Email")}
           isValid={isValid.Email}
           setIsValid={updateIsValid("Email")}
@@ -102,19 +82,8 @@ function Feedback() {
           setIsValid={updateIsValid("Message")}
           placeholder="Your message goes here."
           isTextArea
-          wordLimit={"750"}
           validator={validateText} />
       </Labelize>
-      <TextInput
-          name="Navigator"
-          value={navigatorInfo}
-          hidden="true"
-       />
-       <TextInput
-          name="Ip Info"
-          value={ipinfo}
-          hidden="true"
-       />
       <ButtonSpacer />
       <Button type="submit" text="Submit" disabled={!validateIsValid()}/>
     </FeedbackForm>
