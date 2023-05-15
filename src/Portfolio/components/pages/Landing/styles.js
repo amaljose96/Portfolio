@@ -26,7 +26,7 @@ export const Name = styled.div`
     font-weight:bold;
     color:${colors.primary};
     font-family: Meow Script;
-    text-shadow: 0 0 10px #fff9, 0 0 20px #fff4, 0 0 30px ${colors.secondary}aa;
+    text-shadow: 0 0 10px #fff9, 0 0 20px #fff4, 0 0 30px ${colors.background}aa;
 
 
     
