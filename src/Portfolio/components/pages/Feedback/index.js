@@ -31,7 +31,7 @@ function Feedback() {
       setIpInfo(ipinfoText)
       setNavigatorInfo(`isCookieEnabled:${navigator.cookieEnabled.toString()} memory:${navigator.deviceMemory.toString()} languages:${navigator.languages.toString()} touchPoints:${navigator.maxTouchPoints.toString()} userAgent:${navigator.userAgent.toString()} isBot:${navigator.webdriver.toString()}`)
     })
-  })
+  },[])
   function updateField(value, setValue) {
     return (field) => {
       return (newValue) => {
