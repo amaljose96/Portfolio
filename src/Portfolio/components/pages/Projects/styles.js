@@ -6,6 +6,7 @@ export const ProjectsContainer = styled.div`
     background-color:${props=>props.shade};
     padding-bottom:40px;
     transition: all 0.3s;
+    box-shadow:inset 0px 0px 20vw 6vw #00000008;
 `;
 export const ProjectsTitle = styled.div`
     text-align:center;
@@ -19,7 +20,7 @@ export const ProjectSections = styled.div`
     padding:0px 15vw;
     box-sizing:border-box;
     ${isMobile() && `
-        padding:0px 5px;
+        padding:0px 10px;
     `}
 `;
 export const ProjectSection = styled.div`
@@ -122,8 +123,6 @@ export const ProjectStackChip = styled.div`
     }
 `;
 export const backgroundColorKeyframes=[
-"#a7ba4288",
-"#95ccba88",
-"#ffdede88",
-"#fff0cb88",
-"#f2cc8488"]
+"#a7ba4255",
+"#95ccba55",
+"#ffdede55",]
