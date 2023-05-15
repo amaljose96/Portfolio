@@ -11,11 +11,15 @@ function createGetPercent(percentStart, scrollPerElement){
         }
         else{
             let t= (scroll-percentStart)/(percentEnd-percentStart);
+            if(t == NaN){
+                return 0
+            }
             return t
         }
     }
 }
 export function generateInteractiveTimeline(timelineItems) {
+    
     timelineItems=timelineItems.sort((a,b)=>a.time-b.time)
     let screenWidth = window.innerWidth - 5;
     let numItemsInRow = parseInt((screenWidth - sideWidth) / (elementWidth + sideWidth));

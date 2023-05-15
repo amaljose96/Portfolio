@@ -203,6 +203,9 @@ export const trainColor = colors.secondary;
 
 if(isMobile()){
     elementWidth= window.innerWidth -100;
+    if(elementWidth<100){
+        elementWidth=100
+    }
     sideWidth=25;
     numItemsInRow=1;
 }
