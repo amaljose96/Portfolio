@@ -23,14 +23,14 @@ export const TimelineTogglerContainer = styled.div`
 export const TimelineToggleOptions = styled.div`
     display:inline-flex;
     align-items:center;
-    border:solid 1px ${colors.shade};
+    border:solid 1px ${colors.shade}33;
     background-color:${colors.text}cc;
     border-radius:100px;
     margin:20px 0px;
     backdrop-filter:blur(10px);
 `;
 export const TimelineToggleOption = styled.div`
-    background-color:${props => props.active ? colors.background + "88" : "none"};
+    background-color:${props => props.active ? colors.background + "99" : "none"};
     color:${props => props.active ? colors.background : colors.shade};
     transition:all 0.3s;
     user-select:none;

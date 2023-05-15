@@ -18,7 +18,7 @@ function Projects({scroll=0}) {
     scrollTop=scroll - trigger;
   }
   
-  const [types,setTypes] = React.useState(Object.keys(skillType));
+  const [types,setTypes] = React.useState(["frontend","UX"]);
   return <ProjectsContainer id="projects" ref={projectScroll} shade={getAnimatedColor(backgroundColorKeyframes,scrollTop/(projectScroll?.current?.clientHeight||1))}>
     <ProjectsTitle>Projects</ProjectsTitle>
     <TypeToggler types={types} setTypes={setTypes}/>
