@@ -20,6 +20,8 @@ function Footer() {
   const deployTime = new Date(gitInfo.time);
   let [aliveText,setAliveText] = React.useState("");
   React.useEffect(()=>{
+    let duration = new Date().getTime() - deployTime.getTime()
+    setAliveText(secondsToDhms(duration))
     setInterval(()=>{
       let duration = new Date().getTime() - deployTime.getTime()
       setAliveText(secondsToDhms(duration))
