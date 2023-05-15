@@ -26,7 +26,7 @@ export const ProjectsData = [{
             techStack: ["Django", "Python", "HTML", "CSS", "JavaScript", "Figma"],
             duration: "December 2021 - Present",
             color: "#900",
-            font:"AG_Helvetica",
+            font:"Helvetica",
         },
         {
             title: "TYPS eCases",
@@ -35,7 +35,7 @@ export const ProjectsData = [{
             techStack: ["Twine", "Harlowe", "HTML", "CSS", "JavaScript"],
             duration: "October 2021 - Present",
             color: "#900",
-            font:"AG_Helvetica",
+            font:"Helvetica",
         },
         {
             title: "myProduct Promotions",
@@ -223,7 +223,7 @@ export const ProjectsData = [{
             contribution:"This was my first freelance project which was done using HTML, CSS and JQuery",
             techStack:["HTML","CSS","JavaScript","JQuery"],
             duration:"February 2018",
-            font:"Avenir Light",
+            font:"Avenir",
             color:"darkred",
         },{
             title:"Ragam '18",

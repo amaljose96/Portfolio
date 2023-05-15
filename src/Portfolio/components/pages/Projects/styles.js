@@ -53,7 +53,7 @@ export const ProjectCard = styled.div`
     margin:1px 0px;
     width:100%;
     
-    background-color:${colors.background}aa ;
+    background-color:${colors.background}ef ;
     transition: all 0.2s linear;
     ${props=>props.font && `font-family : ${props.font}`};
     :hover{

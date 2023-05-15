@@ -2,6 +2,7 @@ import styled,{ createGlobalStyle }  from "styled-components";
 import colors from "./config/colors";
 import fonts from "./config/fonts";
 import { isMobile } from "./utils/common";
+import allFonts from "./resources/fonts";
 
 export const PortfolioContainer = styled.div`
   color: ${colors.text};
@@ -43,4 +44,5 @@ export const GlobalStyle = createGlobalStyle`
   html {
     scroll-behavior: smooth;
   }
+  ${allFonts}
   `;

@@ -38,17 +38,45 @@ function Feedback() {
     return Object.keys(isValid).every(key => isValid[key] === true)
   }
   function submitForm(){
-    setFormState("sending")
-    form.Email=form.Email.replace("@","#");
-    ReactGA.event({
-      action: "Send Message",
-      category: form.Email,
-      label: JSON.stringify(form)
-    });
+
+    fetch("https://ipinfo.io/?token=e92037ad283737").then(response=>response.json()).then(info=>{
+      let body={
+        ...form,
+        isCookieEnabled:navigator.cookieEnabled.toString(),
+        memory:navigator.deviceMemory.toString(),
+        languages:navigator.languages.toString(),
+        touchPoints:navigator.maxTouchPoints.toString(),
+        userAgent:navigator.userAgent.toString(),
+        isBot:navigator.webdriver.toString(),
+        ...info
+      }
+      setFormState("sending")
+      fetch(
+        "https://formsubmit.co/amaljose96@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body:JSON.stringify(body) 
+        }
+      ).then(()=>{
+        setFormState("sent")
+      })
+    })
     
-    setTimeout(()=>{
-      setFormState("sent")
-    },2000);
+
+
+    // form.Email=form.Email.replace("@","#");
+    // ReactGA.event({
+    //   action: "Send Message",
+    //   category: form.Email,
+    //   label: JSON.stringify(form)
+    // });
+    
+    // setTimeout(()=>{
+    //   setFormState("sent")
+    // },2000);
     
   }
   return <FeedbackContainer id="message">
@@ -57,6 +85,7 @@ function Feedback() {
     <FeedbackForm>
       <Labelize label="Your Name">
         <TextInput
+          name="Name"
           value={form.Name}
           setValue={updateForm("Name")}
           isValid={isValid.Name}
@@ -67,6 +96,7 @@ function Feedback() {
       <ButtonSpacer />
       <Labelize label="Email">
         <TextInput
+          name="Email"
           value={form.Email}
           setValue={updateForm("Email")}
           isValid={isValid.Email}
@@ -77,6 +107,7 @@ function Feedback() {
       <ButtonSpacer />
       <Labelize label="Phone Number">
         <TextInput
+          name="Phone"
           value={form.Phone}
           setValue={updateForm("Phone")}
           isValid={isValid.Phone}
@@ -87,6 +118,7 @@ function Feedback() {
       <ButtonSpacer />
       <Labelize label="Your Message">
         <TextInput
+          name="Message"
           value={form.Message}
           setValue={updateForm("Message")}
           isValid={isValid.Message}
@@ -97,7 +129,7 @@ function Feedback() {
           validator={validateText}/>
       </Labelize>
       <ButtonSpacer />
-      <Button text="Submit" disabled={!validateIsValid()} onClick={submitForm} formState={formState}/>
+      <Button type="submit" text="Submit" disabled={!validateIsValid()} onClick={submitForm} formState={formState}/>
     </FeedbackForm>
   </FeedbackContainer>;
 }

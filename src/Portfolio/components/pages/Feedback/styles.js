@@ -13,14 +13,14 @@ export const FeedbackContainer = styled.div`
 
 
 export const FeedbackTitle =styled.div`
-text-align:center;
-font-size:56px;
-font-weight:bold;
-padding-top:70px;
+    text-align:center;
+    font-size:78px;
+    font-weight:bold;
+    padding-top:70px;
+    font-family:TildaGrande;
 `;
 export const FeedbackDescription =styled.div`
     font-size:18px;
-    font-weight:light;
     padding:50px;
     text-align:center;
 `;

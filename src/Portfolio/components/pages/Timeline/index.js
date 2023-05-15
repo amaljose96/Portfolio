@@ -43,15 +43,15 @@ function Timeline({scroll=0}) {
       {
         generateInteractiveTimeline(filteredContent).map((row, index) => {
 
-          return <TimelineRow align={index % 2 === 0 ? "left" : "right"}>
+          return <TimelineRow  key={Math.random()} align={index % 2 === 0 ? "left" : "right"}>
             {
               row.map(element => {
                 let percent = element.getPercent(scrollTop)
                 if (element.type === 'side') {
-                  return <SidePiece {...element} percent={percent} forward={index % 2 === 0} />
+                  return <SidePiece key={Math.random()} {...element} percent={percent} forward={index % 2 === 0} />
                 }
                 else {
-                  return <CalendarEvent {...element} percent={percent} forward={index % 2 === 0} />
+                  return <CalendarEvent  key={Math.random()} {...element} percent={percent} forward={index % 2 === 0} />
                 }
               })
             }
