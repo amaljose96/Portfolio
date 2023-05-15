@@ -14,10 +14,10 @@ export const FeedbackContainer = styled.div`
 
 export const FeedbackTitle =styled.div`
     text-align:center;
-    font-size:78px;
+    font-size:100px;
     font-weight:bold;
     padding-top:70px;
-    font-family:TildaGrande;
+    font-family:Meow Script;
 `;
 export const FeedbackDescription =styled.div`
     font-size:18px;

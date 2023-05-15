@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import colors from "../../config/colors";
+import fonts from "../../config/fonts";
 
 
 export const TextInputContainer = styled.div`
@@ -31,7 +32,7 @@ export const Input = styled.input`
 export const TextArea = styled.textarea`
     appearance: none;
     min-height: 100px;
-    font-family: 'Lato',sans-serif;
+    ${fonts.default}
     appearance: none;
     padding:10px;
     background-color: ${colors.shade};

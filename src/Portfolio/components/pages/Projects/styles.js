@@ -3,14 +3,17 @@ import { isMobile } from "../../../utils/common";
 import colors from "../../../config/colors";
 
 export const ProjectsContainer = styled.div`
-    background-color:${colors.text}0a;
+    background-color:${props=>props.shade};
     padding-bottom:40px;
+    transition: all 0.3s;
 `;
 export const ProjectsTitle = styled.div`
     text-align:center;
-    font-size:56px;
+    font-size:100px;
     font-weight:bold;
     padding-top:70px;
+    color:${colors.background};
+    font-family: Meow Script;
 `;
 export const ProjectSections = styled.div`
     padding:0px 15vw;
@@ -48,14 +51,14 @@ export const ProjectSectionCards = styled.div`
     }
 `;
 export const ProjectCard = styled.div`
-    padding:20px;
+    padding:25px;
     box-sizing:border-box;
     margin:1px 0px;
     width:100%;
     
     background-color:${colors.background}ef ;
     transition: all 0.2s linear;
-    ${props=>props.font && `font-family : ${props.font}`};
+    // ${props=>props.font && `font-family : ${props.font}`};
     :hover{
         background-color:${colors.background}ff;
     }
@@ -118,3 +121,9 @@ export const ProjectStackChip = styled.div`
         margin-left:0px;
     }
 `;
+export const backgroundColorKeyframes=[
+"#a7ba4288",
+"#95ccba88",
+"#ffdede88",
+"#fff0cb88",
+"#f2cc8488"]

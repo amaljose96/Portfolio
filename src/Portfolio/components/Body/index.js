@@ -12,7 +12,7 @@ function Body() {
   const [scrollTop, setScrollTop] = React.useState(0);
   React.useEffect(() => {
     const handleScroll = () => {
-        setScrollTop(window.scrollY);
+        setScrollTop(Math.floor(window.scrollY/10)*10);
     };
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -23,7 +23,7 @@ function Body() {
     <BackgroundElements/>
     <Landing/>
     <Timeline scroll={scrollTop}/>
-    <Projects/>
+    <Projects  scroll={scrollTop}/>
     <Navigator scroll={scrollTop}/>
     <Feedback/>
     <Footer/>

@@ -1,12 +1,25 @@
 import React from "react";
 import { ProjectsData, skillColors, skillType } from "./constants";
-import { ProjectsContainer, ProjectsTitle, ProjectSections, ProjectSection, ProjectSectionTitle, ProjectSectionCards, ProjectCard, ProjectTitle, ProjectDuration, ProjectStack, ProjectDescription, ProjectContribution, ProjectLinkTitle, ProjectStackChip } from "./styles";
+import { ProjectsContainer, ProjectsTitle, ProjectSections, ProjectSection, ProjectSectionTitle, ProjectSectionCards, ProjectCard, ProjectTitle, ProjectDuration, ProjectStack, ProjectDescription, ProjectContribution, ProjectLinkTitle, ProjectStackChip, backgroundColorKeyframes } from "./styles";
 import TypeToggler from "./TypeToggler";
 import ReactGA from "../../../config/ga";
+import { getAnimatedColor, isMobile } from "../../../utils/common";
 
-function Projects() {
+function Projects({scroll=0}) {
+
+  const projectScroll = React.useRef();
+
+  let scrollTop = 0;
+  let trigger = projectScroll?.current?.offsetTop-window.innerHeight/(isMobile() ? 3 : 2);
+  if (scroll < trigger) {
+    scrollTop=0;
+  }
+  else {
+    scrollTop=scroll - trigger;
+  }
+  
   const [types,setTypes] = React.useState(Object.keys(skillType));
-  return <ProjectsContainer id="projects">
+  return <ProjectsContainer id="projects" ref={projectScroll} shade={getAnimatedColor(backgroundColorKeyframes,scrollTop/(projectScroll?.current?.clientHeight||1))}>
     <ProjectsTitle>Projects</ProjectsTitle>
     <TypeToggler types={types} setTypes={setTypes}/>
     <ProjectSections>

@@ -2,7 +2,6 @@ import TescoModern from "./TescoModern.ttf";
 import AvenirLight from "./AvenirLight.ttf";
 import Helvetica from "./Helvetica.ttf";
 import Archer from "./Archer.ttf";
-import TildaGrande from "./TildaGrande.ttf";
 
 const allFonts=`
 @font-face {
@@ -27,12 +26,6 @@ const allFonts=`
   font-family: "Archer";   
   src: local("Archer"),
     url(${Archer}) format("truetype");
-}
-
-@font-face {
-  font-family: "TildaGrande";   
-  src: local("TildaGrande"),
-    url(${TildaGrande}) format("truetype");
 }
 
 `

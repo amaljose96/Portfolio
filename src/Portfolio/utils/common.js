@@ -1,3 +1,5 @@
+import colors from "../config/colors";
+
 export function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
@@ -27,4 +29,22 @@ export function isMobile() {
       check = true;
   })(navigator.userAgent || navigator.vendor || window.opera);
   return check;
+}
+
+export function getAnimatedColor(keyframes,percent){
+  if(keyframes.length===0 || percent == NaN){
+    return colors.background
+  }
+  if(keyframes.length === 1){
+    return keyframes[1]
+  }
+  if(percent > 1){
+    return keyframes[keyframes.length-1]
+  }
+  let slots=keyframes.length-1;
+  let index = slots*percent;
+  let previous=keyframes[Math.floor(index)||0]
+  let next=keyframes[Math.ceil(index)||keyframes.length-1]
+  let fraction = (index - Math.floor(index)) || 0.5;
+  return colors.getTransitionColor(previous,next,fraction)
 }

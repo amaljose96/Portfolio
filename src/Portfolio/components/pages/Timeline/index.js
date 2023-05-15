@@ -14,11 +14,11 @@ function Timeline({scroll=0}) {
 
   let scrollTop = 0;
   let trigger = timelineScroll?.current?.offsetTop-window.innerHeight/(isMobile() ? 3 : 2);
-  if (window.scrollY < trigger) {
+  if (scroll < trigger) {
     scrollTop=0;
   }
   else {
-    scrollTop=window.scrollY - trigger;
+    scrollTop=scroll - trigger;
   }
   
 

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BackgroundElementsContainer = styled.div`
-    position:fixed;
+    position:absolute;
     top:0;
     left:0;
     height:100vh;

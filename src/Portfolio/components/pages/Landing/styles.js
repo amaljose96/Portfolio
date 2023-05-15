@@ -22,9 +22,14 @@ export const LandingContent = styled.div`
     ${isMobile() && `width:100%; height:70vh;align-items:center;`}
 `;
 export const Name = styled.div`
-    font-size:108px;
+    font-size:158px;
     font-weight:bold;
     color:${colors.primary};
+    font-family: Meow Script;
+    text-shadow: 0 0 10px #fff9, 0 0 20px #fff4, 0 0 30px ${colors.secondary}aa;
+
+
+    
 `;
 
 

@@ -23,7 +23,8 @@ export const TimelineRow = styled.div`
 
 export const TimelineTitle = styled.div`
     text-align:center;
-    font-size:56px;
+    font-size:100px;
+    font-family: Meow Script;
     font-weight:bold;
     padding-top:70px;
 `;
