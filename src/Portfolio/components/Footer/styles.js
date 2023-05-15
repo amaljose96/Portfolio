@@ -14,11 +14,12 @@ font-size:16px;
 `;
 export const GitLine = styled.div`
 font-size:10px;
-color:${colors.background}55;
+color:${colors.background}33;
 `;
 export const CommitMessage = styled.span`
-    font-size:8px;
-    color:${colors.background}11;
+    font-size:10px;
+    color:${colors.background}33;
+    transition: all 0.2s ease-in-out;
     :hover{
         color:${colors.background}99;
         cursor:pointer;

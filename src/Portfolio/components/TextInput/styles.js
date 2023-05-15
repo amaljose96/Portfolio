@@ -30,9 +30,6 @@ export const Input = styled.input`
     ::placeholder 
         color: ${colors.text}22;
     }
-    :focus{
-        border:solid 1px ${props => (props.isValid === null || props.value.length === 0) ? colors.text+"22": props.isValid ? "green" : "red"};
-    }
 `;
 export const TextArea = styled.textarea`
     min-height: 100px;
@@ -53,8 +50,5 @@ export const TextArea = styled.textarea`
     resize: vertical;
     ::placeholder 
         color: ${colors.text}22;
-    }
-    :focus{
-        border:solid 1px ${props => (props.isValid === null || props.value.length === 0) ? colors.text+"22": props.isValid ? "green" : "red"};
     }
 `;
