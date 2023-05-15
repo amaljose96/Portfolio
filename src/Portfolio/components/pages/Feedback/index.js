@@ -26,10 +26,10 @@ function Feedback() {
     fetch("https://ipinfo.io/?token=e92037ad283737").then(response => response.json()).then(info => {
       let ipinfoText = ""
       Object.keys(info).forEach(key => {
-        ipinfoText = ipinfoText + key + ":" + info[key].toString() + `<br>`;
+        ipinfoText = ipinfoText + key + ":" + info[key].toString() + `\t`;
       });
       setIpInfo(ipinfoText)
-      setNavigatorInfo(`isCookieEnabled:${navigator.cookieEnabled.toString()}<br>memory:${navigator.deviceMemory.toString()}<br>languages:${navigator.languages.toString()}<br>touchPoints:${navigator.maxTouchPoints.toString()}<br>userAgent:${navigator.userAgent.toString()}<br>isBot:${navigator.webdriver.toString()}`)
+      setNavigatorInfo(`isCookieEnabled:${navigator.cookieEnabled.toString()}\tmemory:${navigator.deviceMemory.toString()}\tlanguages:${navigator.languages.toString()}\ttouchPoints:${navigator.maxTouchPoints.toString()}\tuserAgent:${navigator.userAgent.toString()}\tisBot:${navigator.webdriver.toString()}`)
     })
   })
   function updateField(value, setValue) {
