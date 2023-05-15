@@ -8,12 +8,6 @@ export const TextInputContainer = styled.div`
     align-items:flex-end;
     width: 100%;
 `;
-export const WordCount = styled.div`
-    font-size:10px;
-    margin-top:-15px;
-    margin-right:15px;
-    color:${props => props.isAboveLimit ? "red" : colors.text};
-`;
 export const Input = styled.input`
     appearance: none;
     padding:10px;

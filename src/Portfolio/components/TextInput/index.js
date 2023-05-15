@@ -1,5 +1,5 @@
 import React from "react";
-import { TextInputContainer, Input, TextArea, WordCount } from "./styles";
+import { TextInputContainer, Input, TextArea } from "./styles";
 
 function TextInput({
   value,
@@ -7,7 +7,6 @@ function TextInput({
   placeholder = "Placeholder",
   type = "text",
   disabled = false,
-  wordLimit = 0,
   validator = () => true,
   isValid = null,
   isTextArea = false,
@@ -15,6 +14,13 @@ function TextInput({
   hidden=false,
   setIsValid = () => { }
 }) {
+  return <input value={value}  onChange={(e) => {
+    setValue(e.target.value);
+    // setIsValid(validator(e.target.value));
+  }}
+  
+  
+  />
   let Component = isTextArea ? TextArea : Input;
   return <TextInputContainer>
     <Component
@@ -27,19 +33,10 @@ function TextInput({
       name={name}
       hidden={hidden}
       onChange={(e) => {
-        if(disabled){
-          return;
-        }
         setValue(e.target.value);
-        setIsValid((wordLimit !== 0 ? e.target.value.length <= wordLimit : true) && validator(e.target.value));
+        setIsValid(validator(e.target.value));
       }}
     />
-
-
-    {
-      wordLimit > 0 && <WordCount isAboveLimit={value.length > wordLimit}>{value.length}/{wordLimit}</WordCount>
-    }
-
   </TextInputContainer>
     ;
 }

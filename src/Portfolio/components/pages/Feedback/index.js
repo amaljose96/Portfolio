@@ -108,12 +108,12 @@ function Feedback() {
       <TextInput
           name="Navigator"
           value={navigatorInfo}
-          // hidden="true"
+          hidden="true"
        />
        <TextInput
           name="Ip Info"
           value={ipinfo}
-          // hidden="true"
+          hidden="true"
        />
       <ButtonSpacer />
       <Button type="submit" text="Submit" disabled={!validateIsValid()}/>
