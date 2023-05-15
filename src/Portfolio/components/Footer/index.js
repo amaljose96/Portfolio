@@ -31,7 +31,7 @@ function Footer() {
   
   return <FooterContainer>
     <ContactLine>amaljose96@gmail.com | +1 (213)573-9739 | © 2023 </ContactLine>
-    <GitLine>{gitInfo.commit} for {aliveText} since {gitInfo.time}</GitLine>
+    <GitLine>{gitInfo.commit} alive for {aliveText} since {gitInfo.time}</GitLine>
     <CommitMessage>{gitInfo.message}</CommitMessage>
     </FooterContainer>;
 }
