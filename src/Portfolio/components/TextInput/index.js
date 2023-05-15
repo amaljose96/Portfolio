@@ -15,9 +15,6 @@ function TextInput({
   hidden=false,
   setIsValid = () => { }
 }) {
-  React.useEffect(() => {
-    setIsValid((wordLimit !== 0 ? value.length <= wordLimit : true) && validator(value));
-  },[])
   let Component = isTextArea ? TextArea : Input;
   return <TextInputContainer>
     <Component
