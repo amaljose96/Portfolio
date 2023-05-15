@@ -29,7 +29,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit":"npm run git-info",
       "pre-push": "sh push.sh"
     }
   },

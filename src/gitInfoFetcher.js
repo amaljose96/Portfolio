@@ -13,8 +13,8 @@ const execSyncWrapper = (command) => {
 };
 
 const main = () => {
-  let time = new Date().toString();
-  let commit = execSyncWrapper('git rev-parse HEAD');
+  let time = new Date().toString().split(' ').slice(1,5).join(' '); 
+  let commit = execSyncWrapper('git rev-parse --short=7 HEAD');
 
   const obj = {
     time,
