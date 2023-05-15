@@ -17,6 +17,7 @@
     "styled-components": "^5.3.3"
   },
   "scripts": {
+    "git-info": "node src/gitInfoFetcher.js",
     "start": "react-scripts start",
     "build": "react-scripts build && compress-cra",
     "test": "react-scripts test",
@@ -28,6 +29,7 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit":"npm run git-info",
       "pre-push": "sh push.sh"
     }
   },
