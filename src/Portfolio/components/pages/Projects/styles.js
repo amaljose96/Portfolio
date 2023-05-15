@@ -32,10 +32,9 @@ export const ProjectSectionTitle = styled.div`
     font-size:28px;
     text-align:center;
     padding:20px 20px;
-   
     margin-bottom:1px;
     background-color:${colors.background};
-    border-radius:20px 20px 0px 0px;
+    border-radius:20px 20px 5px 5px;
     ${!isMobile() && `
     position:sticky;
     top:0;
@@ -45,25 +44,26 @@ export const ProjectSectionTitle = styled.div`
 
 `;
 export const ProjectSectionCards = styled.div`
-    
     :last-child{
-        border-radius:0px 0px 20px 20px;
+        border-radius:5px 5px 20px 20px;
     }
 `;
 export const ProjectCard = styled.div`
     padding:25px;
     box-sizing:border-box;
-    margin:1px 0px;
+    margin:2px 0px;
+    border-radius:5px;
     width:100%;
     
-    background-color:${colors.background}ef ;
+    background-color:${colors.background}dd ;
     transition: all 0.2s linear;
     // ${props=>props.font && `font-family : ${props.font}`};
     :hover{
         background-color:${colors.background}ff;
+        transform:scale(1.015);
     }
     :last-of-type{
-        border-radius:0px 0px 20px 20px;
+        border-radius:5px 5px 20px 20px;
     }
 `;
 export const ProjectTitle = styled.div`
