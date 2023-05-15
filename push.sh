@@ -5,5 +5,5 @@ rm -rf ../amaljose96.github.io/*
 cp -R build/* ../amaljose96.github.io/
 cd ../amaljose96.github.io
 git add .
-git commit -m $message
+git commit -m "$message"
 git push
