@@ -37,7 +37,6 @@ function Navigator({ scroll }) {
           scrollEnd = Infinity;
         }
         let isOptionActive = scrollStart === undefined ? index === 0 : scroll >= (scrollStart) && scroll < (scrollEnd);
-        console.log(option.label,scroll,scrollStart,scrollEnd,isOptionActive)
         return <NavigationOption active={isOptionActive} 
         open={showLabels} 
         onClick={() => {

@@ -14,7 +14,6 @@ function SkillItem({title,value,subtext,color,scroll=0}) {
   else if(scroll>heightEnd){
     percent = 1
   }
-  if(title=="JavaScript")console.log(title,percent)
   let trainColor = color;
   let fillLength = (value/10)*percent * width;
   return <SkillItemContainer id={title} ref={skillItemContainer} percent={percent} perfect={value==10}>
