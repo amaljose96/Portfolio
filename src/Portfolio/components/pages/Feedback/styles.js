@@ -3,7 +3,7 @@ import colors from "../../../config/colors";
 import { isMobile } from "../../../utils/common";
 
 export const FeedbackContainer = styled.div`
-    background-color:${colors.background};
+    background-color:${colors.background}aa;
     display:flex;
     align-items:center;
     justify-content:center;

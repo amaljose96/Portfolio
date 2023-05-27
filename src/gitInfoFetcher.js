@@ -13,11 +13,13 @@ const execSyncWrapper = (command) => {
 };
 
 const main = () => {
+  let branch = execSyncWrapper('git rev-parse --abbrev-ref HEAD');
   let time = new Date().toString().split(' ').slice(1,5).join(' '); 
   let commit = execSyncWrapper('git rev-parse --short=7 HEAD');
   let message = execSyncWrapper('git log --format=%B -n 1 $(git log -1 --pretty=format:"%h")')
 
   const obj = {
+    branch,
     time,
     commit,
     message

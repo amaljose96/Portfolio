@@ -35,8 +35,8 @@ function Feedback() {
   function validateIsValid() {
     return Object.keys(isValid).every(key => isValid[key] === true)
   }
-  return <FeedbackContainer id="message">
-    <FeedbackTitle>Send me a Message</FeedbackTitle>
+  return <FeedbackContainer>
+    <FeedbackTitle id="message">Send me a Message</FeedbackTitle>
     <FeedbackDescription>You can contact me through the form below. You can also mail me <a href="mailto:amaljose96@gmail.com">here</a></FeedbackDescription>
     <FeedbackForm action="https://formsubmit.io/send/amaljose96@gmail.com" method="POST" ac>
       <Labelize label="Your Name">

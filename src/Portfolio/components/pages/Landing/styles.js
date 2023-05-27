@@ -54,6 +54,7 @@ export const ContactElement = styled.div`
     border-radius:5px;
     cursor:pointer;
     opacity:0.8;
+    border-radius:10px;
     :hover{
         opacity:1;
     }

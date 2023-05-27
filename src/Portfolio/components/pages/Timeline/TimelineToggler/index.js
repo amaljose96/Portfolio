@@ -1,9 +1,8 @@
 import React from "react";
 import { TimelineTogglerContainer, TimelineToggleOptions, TimelineToggleOption } from "./styles";
 import ReactGA from "../../../../config/ga";
-const options = ["life", "education", "work"]
 
-function TimelineToggler({ types, setTypes }) {
+function TimelineToggler({ types, setTypes,options=["life", "education", "work"] }) {
   return <TimelineTogglerContainer>
       <TimelineToggleOptions>
         <TimelineToggleOption active={types.length === 3} onClick={() => { 

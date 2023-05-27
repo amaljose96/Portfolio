@@ -1,5 +1,5 @@
 {
-  "time": "May 15 2023 10:10:21",
-  "commit": "72bd439",
-  "message": "Changed color for glow"
+  "time": "May 15 2023 10:20:40",
+  "commit": "1ed3c51",
+  "message": "updated inner width to prevent breakage in mobile"
 }

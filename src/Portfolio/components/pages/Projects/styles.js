@@ -5,7 +5,6 @@ import colors from "../../../config/colors";
 export const ProjectsContainer = styled.div`
     background-color:${props=>props.shade};
     padding-bottom:40px;
-    transition: all 0.3s;
     box-shadow:inset 0px 0px 20vw 6vw #00000008;
 `;
 export const ProjectsTitle = styled.div`
@@ -13,7 +12,7 @@ export const ProjectsTitle = styled.div`
     font-size:100px;
     font-weight:bold;
     padding-top:70px;
-    color:${colors.background};
+    color:${colors.text};
     font-family: Meow Script;
 `;
 export const ProjectSections = styled.div`
@@ -34,11 +33,12 @@ export const ProjectSectionTitle = styled.div`
     text-align:center;
     padding:20px 20px;
     margin-bottom:1px;
-    background-color:${colors.background};
+    background-color:${colors.background}d0;
+    backdrop-filter:blur(10px);
     border-radius:20px 20px 5px 5px;
     ${!isMobile() && `
     position:sticky;
-    top:0;
+    top:33px;
     left:0;
     z-index:10;
     `}
@@ -105,13 +105,14 @@ export const ProjectStack = styled.div`
     margin-top:10px;
     z-index:5;
 `;
-export const ProjectStackChip = styled.div`
+export const ProjectStackChip = styled.a`
     font-size:10px;
     padding:5px 10px;
     background-color:${props => props.color};
     margin:3px;
     color:#fff;
     border-radius:100px;
+    text-decoration:none;
     backdrop-filter:blur(5px);
     opacity:0.8;
     user-select:none;
@@ -123,6 +124,6 @@ export const ProjectStackChip = styled.div`
     }
 `;
 export const backgroundColorKeyframes=[
-"#a7ba4255",
-"#95ccba55",
-"#ffdede55",]
+"#eef2d9",
+"#ddeee8",
+"#ffdede",]

@@ -1,8 +1,8 @@
 import React from "react";
 import { TypeTogglerContainer, TypeToggleOptions, TypeToggleOption } from "./styles";
-import { skillType } from "../constants";
 import ReactGA from "../../../../config/ga";
-const options = Object.keys(skillType);
+import { categoryTitles } from "../../Skills/config";
+const options = Object.keys(categoryTitles);
 
 function TypeToggler({types,setTypes}) {
   return <TypeTogglerContainer>
@@ -37,7 +37,7 @@ function TypeToggler({types,setTypes}) {
                 });
                 setTypes([...types, option])
               }
-            }}>{option}</TypeToggleOption>
+            }}>{categoryTitles[option]}</TypeToggleOption>
           })
         }
 

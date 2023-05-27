@@ -7,6 +7,7 @@ import { LinkedInIcon } from "../../../resources/icons/linkedin";
 import { LandingContainer, LandingContent, Name, NamePlaque, Tagline, Contact, ContactElement } from "./styles";
 import { MyFace } from "../../../resources/icons/myFace";
 import { TwitterIcon } from "../../../resources/icons/twitter";
+import { ResumeIcon } from "../../../resources/icons/resume";
 
 function Landing() {
   return <LandingContainer id="home">
@@ -40,6 +41,11 @@ function Landing() {
           window.open("https://twitter.com/amaljose_aj");
         }}>
           <TwitterIcon fillColor={colors.primary} />
+        </ContactElement>
+        <ContactElement onClick={() => {
+          window.open("Resume_AmalJose.pdf");
+        }}>
+          <ResumeIcon fillColor={colors.primary} />
         </ContactElement>
       </Contact>
       </LandingContent>

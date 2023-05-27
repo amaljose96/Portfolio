@@ -28,17 +28,23 @@ function Navigator({ scroll }) {
     }}
   >
     <NavigatorBar>
-      {options.map((option, index) => {
-        scroll = Math.ceil(scroll)
+      {
+      options.map((option, index) => {
+        scroll = Math.ceil(scroll);
         let scrollStart = document.getElementById(option.href)?.offsetTop;
-        let scrollEnd = document.getElementById(options[index + 1]?.href)?.offsetTop;
+        let scrollEnd = document.getElementById(options[index + 1]?.href)?.offsetTop-1;
         if (index === options.length - 1) {
           scrollEnd = Infinity;
         }
         let isOptionActive = scrollStart === undefined ? index === 0 : scroll >= (scrollStart) && scroll < (scrollEnd);
-        return <NavigationOption active={isOptionActive} open={showLabels} onClick={() => {
-          document.getElementById(option.href).scrollIntoView({
-            behavior: 'smooth'
+        console.log(option.label,scroll,scrollStart,scrollEnd,isOptionActive)
+        return <NavigationOption active={isOptionActive} 
+        open={showLabels} 
+        onClick={() => {
+          let point = document.getElementById(option.href).offsetTop;
+          window.scrollTo({
+            top: point+1,
+            behavior: "smooth",
           });
           ReactGA.event({
             category: "Navigator",

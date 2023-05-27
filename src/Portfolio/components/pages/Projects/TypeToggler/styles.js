@@ -4,16 +4,13 @@ import { isMobile } from "../../../../utils/common";
 
 export const TypeTogglerContainer = styled.div`
     position: sticky;
-    top: 10px;
-    right: 0px;
-    height:50px;
-    width:fit-content;
+    top: 0px;
     display:flex;
     align-items: center;
-    justify-content: flex-end;
-    width:100%;
-    padding-right:10px;
+    justify-content: center;
+    width:calc(100vw - 5px);
     box-sizing: border-box;
+    margin:20px 0px;
     z-index:300;
     ${isMobile() && `
         justify-content: center;
@@ -26,11 +23,11 @@ export const TypeToggleOptions = styled.div`
     display:inline-flex;
     align-items:center;
     background-color:${colors.text}22;
-    border-radius:100px;
-    margin:20px 0px;
+    margin:0px;
     backdrop-filter:blur(10px);
     flex-wrap: wrap;
     justify-content:center;
+    width:100%;
     ${isMobile() && `
        border-radius:0px;
     `}

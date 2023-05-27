@@ -1,20 +1,3 @@
-export const skillType = {
-    "frontend": ["React", "HTML", "CSS", "styled-components", "Jest", "Enzyme", "ReactVR", "react-google-charts", "Tailwind","JQuery"],
-    "languages": ["JavaScript", "Python", "Harlowe"],
-    "backend": ["Django", "NodeJS", "Flask", "Firebase","Express","Axios","PHP"],
-    "database": ["Redis", "PostgreSQL", "MongoDB","MySQL"],
-    "UX": ["Figma","Sketch"],
-    "AI": ["scikit-learn","NLTK","Stanford-CoreNLP","Word2Vec","lexrank","Aubio","textblob"]
-}
-export const skillColors = {
-    "frontend": "#000d96",
-    "languages": "#900",
-    "backend": "#d4a900",
-    "database": "#00c90a",
-    "UX": "#7500ab",
-    "AI": "#c40080",
-    "other": "#333"
-}
 export const ProjectsData = [{
     title: "Work Projects",
     projects: [
@@ -32,7 +15,7 @@ export const ProjectsData = [{
             title: "TYPS eCases",
             description: "eCases are a part of the Teach Yourself Pharmaceutical Sciences platform by USC School of Pharmacy, aimed at presenting different scenarios to Pharmacy students testing on their response to the situation.",
             contribution: "I worked with the team to develop the eCases using Twine, HTML and CSS. I also developed a platform wherein new eCases can be 'run' instead of built from scratch.",
-            techStack: ["Twine", "Harlowe", "HTML", "CSS", "JavaScript"],
+            techStack: ["Harlowe", "HTML", "CSS", "JavaScript"],
             duration: "October 2021 - Present",
             color: "#900",
             font:"Helvetica",
@@ -91,7 +74,7 @@ export const ProjectsData = [{
         link: "https://www.marketsentiment.live",
         description: "Real-time AI Chatter & Sentiment Analyzer, for stock trading. The application analyses Twitter posts about stock tickers and displays the sentiment associated with a stock, hence providing insights for stock trading.",
         contribution: "Worked on the Frontend application in React using react-google-charts.",
-        techStack: ["JavaScript", "React", "styled-components", "react-google-charts"],
+        techStack: ["JavaScript", "React", "styled-components"],
         duration: "April 2021 - July 2021",
         color: "#319cd1",
         font:"Open Sans",
@@ -136,7 +119,7 @@ export const ProjectsData = [{
             title: "Hera",
             link: "https://www.npmjs.com/package/hera-monitor",
             description: "Network log manager for axios and express. This tracks details of all incoming requests, corresponding outgoing API calls and responses for each request like timing and responses - hence helping to figure out slow calls or in error logging.",
-            techStack: ["JavaScript", "Express", "NodeJS", "Axios", "React"],
+            techStack: ["JavaScript", "Express", "NodeJS", "React"],
             duration: "April 2020",
             color: "#EA2039"
         },
@@ -144,7 +127,7 @@ export const ProjectsData = [{
             title: "Sodux",
             link: "https://www.npmjs.com/package/sodux-mother",
             description: "Network log manager for axios and express. This tracks details of all incoming requests, corresponding outgoing API calls and responses for each request like timing and responses - hence helping to figure out slow calls or in error logging.",
-            techStack: ["JavaScript", "Express", "NodeJS", "Axios", "React"],
+            techStack: ["JavaScript", "Express", "NodeJS", "React"],
             duration: "April 2020",
             color: "#EA2039"
         },
