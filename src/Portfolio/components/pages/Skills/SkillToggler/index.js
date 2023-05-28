@@ -1,5 +1,4 @@
 import React from "react";
-import { SkillTogglerContainer } from "./styles";
 import { TimelineToggleOptions, TimelineToggleOption, TimelineTogglerContainer } from "../../Timeline/TimelineToggler/styles";
 import ReactGA from "../../../../config/ga";
 

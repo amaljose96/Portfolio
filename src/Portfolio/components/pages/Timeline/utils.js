@@ -11,9 +11,6 @@ function createGetPercent(percentStart, scrollPerElement){
         }
         else{
             let t= (scroll-percentStart)/(percentEnd-percentStart);
-            if(t == NaN){
-                return 0
-            }
             return t
         }
     }
@@ -23,6 +20,9 @@ export function generateInteractiveTimeline(timelineItems) {
     timelineItems=timelineItems.sort((a,b)=>a.time-b.time)
     let screenWidth = window.innerWidth - 5;
     let numItemsInRow = parseInt((screenWidth - sideWidth) / (elementWidth + sideWidth));
+    if(numItemsInRow < 1){
+        numItemsInRow = 1;
+    }
     let rows=[]
     while (timelineItems.length > 0) {
         rows.push(timelineItems.splice(0, numItemsInRow))
@@ -37,7 +37,6 @@ export function generateInteractiveTimeline(timelineItems) {
         }
     },0)
     let scrollTrackLength = rows.length*rowHeight;
-
     let scrollPerElement = scrollTrackLength/numberOfElements;
     let currentScroll=0;
     let enhancedRows=rows.map((row,rowIndex)=>{

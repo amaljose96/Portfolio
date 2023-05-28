@@ -194,6 +194,9 @@ if(isMobile()){
 export let elementWidth=300;
 export let sideWidth=20;
 export let numItemsInRow = parseInt(((window.innerWidth - 5) - sideWidth) / (elementWidth + sideWidth));
+if(numItemsInRow < 0){
+    numItemsInRow = 1
+}
 export let rowHeight=300;
 export let lineWidth=2;
 export const trackColor = colors.getTransitionColor(colors.text,colors.secondary,0.5);

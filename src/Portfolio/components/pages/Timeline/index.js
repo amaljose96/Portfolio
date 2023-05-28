@@ -1,26 +1,27 @@
 import React from "react";
 import CalendarEvent from "./CalendarEvent";
 import { timelineContent } from "./constants";
-import { TimelineContainer, TimelineItems, TimelineRow,TimelineTitle } from "./styles";
+import { TimelineContainer, TimelineItems, TimelineRow, TimelineTitle } from "./styles";
 import TimelineToggler from "./TimelineToggler";
 import { generateInteractiveTimeline } from "./utils";
 import SidePiece from "./SidePiece";
 import { isMobile } from "../../../utils/common";
 
 
-function Timeline({scroll=0}) {
+function Timeline({ scroll = 0 }) {
   let [enabledTypes, setEnabledTypes] = React.useState(["work", "education"]);
   const timelineScroll = React.useRef();
 
   let scrollTop = 0;
-  let trigger = timelineScroll?.current?.offsetTop-window.innerHeight/(isMobile() ? 3 : 2);
+  let timelineTop = timelineScroll?.current?.offsetTop || 0;
+  let trigger = timelineTop - window.innerHeight / (isMobile() ? 3 : 2);
   if (scroll < trigger) {
-    scrollTop=0;
+    scrollTop = 0;
   }
   else {
-    scrollTop=scroll - trigger;
+    scrollTop = scroll - trigger;
   }
-  
+
 
 
   let filteredContent = timelineContent.filter(event => {
@@ -32,18 +33,19 @@ function Timeline({scroll=0}) {
     })
     return commonTypes.length !== 0
   })
+  let interactiveTimeline = generateInteractiveTimeline(filteredContent);
   return <TimelineContainer id="timeline" ref={timelineScroll}>
-     <TimelineTitle>Timeline</TimelineTitle>
+    <TimelineTitle>Timeline</TimelineTitle>
     <TimelineToggler types={enabledTypes} setTypes={setEnabledTypes} />
-    <br/><br/><br/>
+    <br /><br /><br />
     {
       enabledTypes.length === 0 && <>Select event type</>
     }
     <TimelineItems>
       {
-        generateInteractiveTimeline(filteredContent).map((row, index) => {
+        interactiveTimeline.map((row, index) => {
 
-          return <TimelineRow  key={Math.random()} align={index % 2 === 0 ? "left" : "right"}>
+          return <TimelineRow key={Math.random()} align={index % 2 === 0 ? "left" : "right"}>
             {
               row.map(element => {
                 let percent = element.getPercent(scrollTop)
@@ -51,7 +53,7 @@ function Timeline({scroll=0}) {
                   return <SidePiece key={Math.random()} {...element} percent={percent} forward={index % 2 === 0} />
                 }
                 else {
-                  return <CalendarEvent  key={Math.random()} {...element} percent={percent} forward={index % 2 === 0} />
+                  return <CalendarEvent key={Math.random()} {...element} percent={percent} forward={index % 2 === 0} />
                 }
               })
             }

@@ -33,7 +33,7 @@ export const SkillName = styled.div`
 export const SkillValue =styled.div`
     font-size:16px;
     font-weight:bold;
-    color:${colors.background}33;
+    color:${colors.background}01;
 `;
 export const SkillSubText = styled.div`
     font-size:12px;

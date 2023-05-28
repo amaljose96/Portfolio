@@ -68,7 +68,13 @@ function Projects({ scroll = 0 }) {
                           }
                           let type = skillConfig[skill].type
                           let skillColor = skillColors[type]
-                          return <ProjectStackChip key={si + "_" + pi + "_skill_" + ski} href={"#"+skill} color={skillColor}>{skill}</ProjectStackChip>
+                          return <ProjectStackChip key={si + "_" + pi + "_skill_" + ski} color={skillColor} onClick={()=>{
+                            let point = document.getElementById(skill).offsetTop;
+                            window.scrollTo({
+                              top: point-window.innerHeight/3,
+                              behavior: "smooth",
+                            });
+                          }}>{skill}</ProjectStackChip>
                         })
                       }
                     </ProjectStack>

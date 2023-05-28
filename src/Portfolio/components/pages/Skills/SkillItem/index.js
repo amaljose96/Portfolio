@@ -1,11 +1,10 @@
 import React from "react";
 import { SkillItemContainer,SkillLine,SkillName,SkillValue,SkillSubText, height, lineWidth, trackColor, width } from "./styles";
-import { skillColors } from "../config";
-import { isMobile } from "../../../../utils/common";
 
 function SkillItem({title,value,subtext,color,scroll=0}) {
   const skillItemContainer = React.useRef();
-  let heightStart = skillItemContainer?.current?.offsetTop-(window.innerHeight)*0.7;
+  let skillItemTop = skillItemContainer?.current?.offsetTop || 0;
+  let heightStart = skillItemTop-(window.innerHeight)*0.7;
   let heightEnd = heightStart+height*2;
   let percent = (scroll-heightStart)/(height*2);
   if(scroll<heightStart){
@@ -19,7 +18,7 @@ function SkillItem({title,value,subtext,color,scroll=0}) {
   return <SkillItemContainer id={title} ref={skillItemContainer} percent={percent} perfect={value==10}>
     <SkillLine>
     <SkillName>{title}</SkillName>
-    {/* <SkillValue>{value}</SkillValue> */}
+    <SkillValue>{value}</SkillValue>
     </SkillLine>
     
     <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} >

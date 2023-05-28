@@ -1,17 +1,20 @@
 import React from "react";
 import colors from "../../../../config/colors";
-import { CalendarEventContainer, IconContainer, Time, Title, TopContent,BottomContent } from "./styles";
-import { elementWidth, lineWidth,trainColor,trackColor } from "../constants";
+import { CalendarEventContainer, IconContainer, Time, Title, TopContent, BottomContent } from "./styles";
+import { elementWidth, lineWidth, trainColor, trackColor } from "../constants";
 function getDurationText(duration) {
   let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   let time = new Date(duration);
   return `${months[time.getMonth()]} ${time.getFullYear()}`
 }
 function CalendarEvent({ Icon = false, durationText, title, time, percent = 0, forward }) {
+  if(percent === 0){
+    percent = 0.001;
+  }
   return <CalendarEventContainer>
     <TopContent percent={percent}>
       <IconContainer percent={percent}>
-        {Icon && <Icon fillColor={colors.primary} size={35}/>}
+        {Icon && <Icon fillColor={colors.primary} size={35} />}
       </IconContainer>
       <Time percent={percent}>{durationText ? durationText : getDurationText(time)}</Time>
     </TopContent>
@@ -27,8 +30,8 @@ function CalendarEvent({ Icon = false, durationText, title, time, percent = 0, f
     </svg>
     <BottomContent percent={percent}>
 
-        <Title>{title}</Title>
-      
+      <Title>{title}</Title>
+
     </BottomContent>
 
 

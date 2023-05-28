@@ -14,10 +14,10 @@ function Skills({scroll=0}) {
     <SkillsList>
     {items.map(item=>{
       if(item.type === "title"){
-        return <Title>{item.text}</Title>
+        return <Title key={"skill_title_"+item.text}>{item.text}</Title>
       }
       else{
-        return <SkillItem {...item} scroll={scroll}/>
+        return <SkillItem key={"skill_"+item.title} {...item} scroll={scroll}/>
       }
     })}
     </SkillsList>

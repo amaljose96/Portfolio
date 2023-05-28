@@ -105,7 +105,7 @@ export const ProjectStack = styled.div`
     margin-top:10px;
     z-index:5;
 `;
-export const ProjectStackChip = styled.a`
+export const ProjectStackChip = styled.div`
     font-size:10px;
     padding:5px 10px;
     background-color:${props => props.color};

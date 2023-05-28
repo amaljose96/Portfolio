@@ -17,9 +17,9 @@ var dDisplay = d > 0 ? d + (d === 1 ? " day, " : " days, ") : ""
 }
 
 function Footer() {
-  const deployTime = new Date(gitInfo.time);
   let [aliveText,setAliveText] = React.useState("");
   React.useEffect(()=>{
+    const deployTime = new Date(gitInfo.time);
     let duration = new Date().getTime() - deployTime.getTime()
     setAliveText(secondsToDhms(duration))
     setInterval(()=>{
