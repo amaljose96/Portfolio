@@ -9,7 +9,6 @@ export const ProjectsData = [{
             techStack: ["Django", "Python", "HTML", "CSS", "JavaScript", "Figma"],
             duration: "December 2021 - Present",
             color: "#900",
-            font:"Helvetica",
         },
         {
             title: "TYPS eCases",
@@ -18,7 +17,6 @@ export const ProjectsData = [{
             techStack: ["Harlowe", "HTML", "CSS", "JavaScript"],
             duration: "October 2021 - Present",
             color: "#900",
-            font:"Helvetica",
         },
         {
             title: "myProduct Promotions",
@@ -27,7 +25,6 @@ export const ProjectsData = [{
             techStack: ["JavaScript", "React", "styled-components", "Jest", "Enzyme", "NodeJS", "Redis"],
             duration: "September 2018 - July 2021",
             color: "#00569f",
-            font:"TESCO Modern",
         },
         {
             title: "Unified Dashboard",
@@ -36,7 +33,6 @@ export const ProjectsData = [{
             techStack: ["JavaScript", "React", "styled-components", "NodeJS", "MongoDB", "Jest", "Enzyme", "Figma"],
             duration: "May 2019 - July 2021",
             color: "#00569f",
-            font:"TESCO Modern",
         },
         {
             title: "myEveryday Conversations",
@@ -45,7 +41,6 @@ export const ProjectsData = [{
             techStack: ["JavaScript", "React", "styled-components", "NodeJS", "PostgreSQL", "Figma"],
             duration: "October 2018 - May 2019",
             color: "#00569f",
-            font:"TESCO Modern",
         },
         {
             title: "Product Group ID Matcher",
@@ -54,7 +49,6 @@ export const ProjectsData = [{
             techStack: ["JavaScript", "React", "styled-components", "Python", "Flask", "scikit-learn"],
             duration: "June 2019",
             color: "#00569f",
-            font:"TESCO Modern",
         },
         {
             title: "Virtual Store",
@@ -63,7 +57,6 @@ export const ProjectsData = [{
             techStack: ["JavaScript", "ReactVR", "NodeJS"],
             duration: "July 2018 - September 2018",
             color: "#00569f",
-            font:"TESCO Modern",
         },
     ]
 },
@@ -76,16 +69,14 @@ export const ProjectsData = [{
         contribution: "Worked on the Frontend application in React using react-google-charts.",
         techStack: ["JavaScript", "React", "styled-components"],
         duration: "April 2021 - July 2021",
-        color: "#319cd1",
-        font:"Open Sans",
+        color: "#319cd1"
     }, {
         title: "Market Pearl",
         description: "Sustainability-driven B2B fabric sourcing marketplace and inventory analytics platform serving apparel brands, retailers, and manufacturers. The platform connected fabric manufacturers and retailers from across the world, allowing brands to purchase materials from new fabric suppliers.",
         contribution: "Worked with the team to build UX wireframes and the POC in React and Firebase.",
         techStack: ["JavaScript", "React", "styled-components", "Firebase"],
         duration: "May 2020 - November 2020",
-        color: "#fe8590",
-        font:"Rubik",
+        color: "#fe8590"
     }, {
         title: "Coronasafe - Suspect Tracker",
         link: "https://www.coronasafe.in/",
@@ -93,16 +84,14 @@ export const ProjectsData = [{
         contribution: "Worked with the team to develop new features for the existing application.",
         techStack: ["JavaScript", "React", "styled-components", "Tailwind"],
         duration: "April 2020",
-        color: "#b21936",
-        font:"Poppins"
+        color: "#b21936"
     }, {
         title: "Animapp",
         description: "Webapp connecting pet owners and veterinarians in Chennai",
         contribution: "Worked on the doctor facing application to maintain records of injured pets.",
         techStack: ["PHP","HTML","CSS","JQuery","MySQL","Sketch"],
         duration: "June 2016",
-        color: "#2a286c",
-        font:"Rubik",
+        color: "#2a286c"
     }]
 }, {
     title: "Open Source Contributions",
@@ -190,7 +179,6 @@ export const ProjectsData = [{
             contribution:"My first public facing webpage written in basic HTML, CSS, JQuery and PHP",
             techStack:["HTML","CSS","JavaScript","JQuery","PHP"],
             duration:"2015, 2016",
-            font:"Roboto",
             color:"limegreen"
         },{
             title:"Tathva '16",
@@ -198,7 +186,6 @@ export const ProjectsData = [{
             contribution:"Worked on the Frontend webpage for the team using JQuery and PHP",
             techStack:["HTML","CSS","JavaScript","JQuery","PHP"],
             duration:"October 2016",
-            font:"Nanum Gothic",
             color:"turquoise",
         },{
             title:"Echoes '18",
@@ -206,7 +193,6 @@ export const ProjectsData = [{
             contribution:"This was my first freelance project which was done using HTML, CSS and JQuery",
             techStack:["HTML","CSS","JavaScript","JQuery"],
             duration:"February 2018",
-            font:"Avenir",
             color:"darkred",
         },{
             title:"Ragam '18",

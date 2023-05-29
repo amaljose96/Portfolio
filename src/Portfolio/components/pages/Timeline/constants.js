@@ -183,13 +183,7 @@ export const timelineContent = [
         type: ["education"],
         title: <><Highlight>Graduated</Highlight> from <SecondHighlight>University of Southern California</SecondHighlight></>,
     },
-]
-
-
-    ;
-if(isMobile()){
-
-}
+];
 
 export let elementWidth=300;
 export let sideWidth=20;
