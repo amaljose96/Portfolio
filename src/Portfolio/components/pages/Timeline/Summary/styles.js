@@ -23,4 +23,10 @@ export const SummaryLabel = styled.div`
 `;
 export const SummaryValue = styled.div`
     font-size:48px;
+    display:flex;
+    align-items:baseline;
+`;
+export const SummarySub = styled.div`
+    font-size:14px;
+    margin-right:5px;
 `;

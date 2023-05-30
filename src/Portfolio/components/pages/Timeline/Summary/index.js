@@ -1,5 +1,5 @@
 import React from "react";
-import { SummaryContainer,SummaryElement,SummaryLabel,SummaryValue } from "./styles";
+import { SummaryContainer,SummaryElement,SummaryLabel,SummarySub,SummaryValue } from "./styles";
 import { timelineContent } from "../constants";
 import { renderToString } from 'react-dom/server'
 
@@ -10,6 +10,9 @@ function getDuration(start,end) {
   const fractionalYears = (monthsDiff * 30 + daysDiff) / 365;
   const totalYears = yearsDiff + fractionalYears;
   return totalYears;
+}
+function getYearMonthString(years){
+  return <SummaryValue>{parseInt(years)} <SummarySub>years</SummarySub> {parseInt(12*(years-parseInt(years)))} <SummarySub>months</SummarySub></SummaryValue>
 }
 
 function Summary() {
@@ -29,11 +32,12 @@ function Summary() {
   return <SummaryContainer>
     <SummaryElement>
       <SummaryLabel>Age</SummaryLabel>
-      <SummaryValue>{getDuration(timelineContent[0].time,new Date()).toFixed(1)}</SummaryValue>
+      {getYearMonthString(getDuration(timelineContent[0].time,new Date()))}
     </SummaryElement>
     <SummaryElement>
       <SummaryLabel>Years of Experience</SummaryLabel>
-      <SummaryValue>{workExperience.toFixed(2)}</SummaryValue>
+      {getYearMonthString(workExperience)}
+      
     </SummaryElement>
   </SummaryContainer>;
 }
