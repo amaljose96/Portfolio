@@ -22,7 +22,7 @@ export const TypeTogglerContainer = styled.div`
 export const TypeToggleOptions = styled.div`
     display:inline-flex;
     align-items:center;
-    background-color:${colors.text}22;
+    background-color:${colors.background}aa;
     margin:0px;
     backdrop-filter:blur(10px);
     flex-wrap: wrap;
@@ -34,6 +34,7 @@ export const TypeToggleOptions = styled.div`
 `;
 export const TypeToggleOption = styled.div`
     background-color:${props => props.active ? colors.background + "ee" : "none"};
+    border:solid 1px ${props=>props.active ? colors.secondary : colors.secondary+"00"};
     color:${props => props.active ? colors.text : colors.text};
     transition:all 0.3s;
     user-select:none;

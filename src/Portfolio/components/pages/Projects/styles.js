@@ -113,7 +113,8 @@ export const ProjectStackChip = styled.div`
     }
 `;
 export const backgroundColorKeyframes = [
-    "#758a0f",
+    "#990000",
+    "#95aa0f",
     "#0f8a61",
     "#0f658a"
 ]
