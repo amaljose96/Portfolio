@@ -4,9 +4,9 @@ Confidence level view
 
 */
 export const categoryTitles={
+    "languages":"Languages",
     "frontend":"Frontend Development",
     "testing":"Frontend Testing",
-    "languages":"Languages",
     "backend":"Backend Development",
     "database":"Databases",
     "UX":"User Experience",
@@ -14,13 +14,13 @@ export const categoryTitles={
 }
 
 export const skillColors = {
-    "frontend": "#000d96",
-    "testing": "#990",
-    "languages": "#900",
-    "backend": "#d4a900",
-    "database": "#00c90a",
-    "UX": "#7500ab",
-    "AI": "#c40080",
+    "frontend": "#0000AA",
+    "testing": "#AAAA00",
+    "languages": "#00AAAA",
+    "backend": "#DD8800",
+    "database": "#00A800",
+    "UX": "#aa00ff",
+    "AI": "#ff00aa",
     "other": "#333"
 }
 export const skillConfig = {

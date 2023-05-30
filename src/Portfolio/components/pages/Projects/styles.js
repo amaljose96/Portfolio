@@ -3,16 +3,15 @@ import { isMobile } from "../../../utils/common";
 import colors from "../../../config/colors";
 
 export const ProjectsContainer = styled.div`
-    background-color:${props=>props.shade};
+    background-color:${props => props.shade};
     padding-bottom:40px;
-    box-shadow:inset 0px 0px 20vw 6vw #00000008;
 `;
 export const ProjectsTitle = styled.div`
     text-align:center;
     font-size:100px;
     font-weight:bold;
     padding-top:70px;
-    color:${colors.text};
+    color:${colors.background};
     font-family: Meow Script;
 `;
 export const ProjectSections = styled.div`
@@ -23,7 +22,6 @@ export const ProjectSections = styled.div`
     `}
 `;
 export const ProjectSection = styled.div`
-    backdrop-filter:blur(5px);
     border-radius:20px;
     padding-top:0px;
     margin:30px 0px;
@@ -33,9 +31,9 @@ export const ProjectSectionTitle = styled.div`
     text-align:center;
     padding:20px 20px;
     margin-bottom:1px;
-    background-color:${colors.background}d0;
-    backdrop-filter:blur(10px);
-    border-radius:20px 20px 5px 5px;
+    background-color:${colors.background};
+    box-shadow: 0px 2px 2px 0px ${colors.text}22;
+    border-radius:20px 20px 0px 0px;
     ${!isMobile() && `
     position:sticky;
     top:33px;
@@ -46,25 +44,17 @@ export const ProjectSectionTitle = styled.div`
 `;
 export const ProjectSectionCards = styled.div`
     :last-child{
-        border-radius:5px 5px 20px 20px;
+        border-radius:0px 0px 20px 20px;
     }
 `;
 export const ProjectCard = styled.div`
     padding:25px;
     box-sizing:border-box;
     margin:2px 0px;
-    border-radius:5px;
     width:100%;
-    
-    background-color:${colors.background}dd ;
-    transition: all 0.2s linear;
-    // ${props=>props.font && `font-family : ${props.font}`};
-    :hover{
-        background-color:${colors.background}ff;
-        transform:scale(1.015);
-    }
+    background-color:${colors.background};
     :last-of-type{
-        border-radius:5px 5px 20px 20px;
+        border-radius:0px 0px 20px 20px;
     }
 `;
 export const ProjectTitle = styled.div`
@@ -110,10 +100,9 @@ export const ProjectStackChip = styled.div`
     padding:5px 10px;
     background-color:${props => props.color};
     margin:3px;
-    color:#fff;
+    color:${colors.background};
     border-radius:100px;
     text-decoration:none;
-    backdrop-filter:blur(5px);
     opacity:0.8;
     user-select:none;
     :hover{
@@ -123,7 +112,8 @@ export const ProjectStackChip = styled.div`
         margin-left:0px;
     }
 `;
-export const backgroundColorKeyframes=[
-"#eef2d9",
-"#ddeee8",
-"#ffdede",]
+export const backgroundColorKeyframes = [
+    "#758a0f",
+    "#0f8a61",
+    "#0f658a"
+]

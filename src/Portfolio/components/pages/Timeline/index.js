@@ -6,6 +6,7 @@ import TimelineToggler from "./TimelineToggler";
 import { generateInteractiveTimeline } from "./utils";
 import SidePiece from "./SidePiece";
 import { isMobile } from "../../../utils/common";
+import Summary from "./Summary";
 
 
 function Timeline({ scroll = 0 }) {
@@ -14,7 +15,7 @@ function Timeline({ scroll = 0 }) {
 
   let scrollTop = 0;
   let timelineTop = timelineScroll?.current?.offsetTop || 0;
-  let trigger = timelineTop - window.innerHeight / (isMobile() ? 3 : 2);
+  let trigger = timelineTop - window.innerHeight / (isMobile() ? 3 : 1.5);
   if (scroll < trigger) {
     scrollTop = 0;
   }
@@ -34,14 +35,15 @@ function Timeline({ scroll = 0 }) {
     return commonTypes.length !== 0
   })
   let interactiveTimeline = generateInteractiveTimeline(filteredContent);
-  return <TimelineContainer id="timeline" ref={timelineScroll}>
+  return <TimelineContainer id="timeline" >
     <TimelineTitle>Timeline</TimelineTitle>
+    <Summary/>
     <TimelineToggler types={enabledTypes} setTypes={setEnabledTypes} />
     <br /><br /><br />
     {
       enabledTypes.length === 0 && <>Select event type</>
     }
-    <TimelineItems>
+    <TimelineItems ref={timelineScroll}>
       {
         interactiveTimeline.map((row, index) => {
 

@@ -63,12 +63,11 @@ export const timelineContent = [
         type: ["education"],
         title: <>Started <Highlight>Bachelors of Technology in Computer Science</Highlight><br/> at <SecondHighlight>National Institute of Technology, Calicut</SecondHighlight></>,
     },
-
-
     {
         Icon: WorkIcon,
         time: new Date("04/01/2016"),
         type: ["work"],
+        endTime:"",
         title: <>Started working as <Highlight>Lab Administrator</Highlight><br/> at <SecondHighlight>Software Systems Laboratory, NIT Calicut</SecondHighlight></>,
     },
     {
@@ -165,7 +164,7 @@ export const timelineContent = [
     },
     {
         Icon: WorkIcon,
-        time: new Date("31/05/2022"),
+        time: new Date("05/31/2022"),
         type: ["work"],
         durationText: "May - August 2022",
         title: <>Interned as <Highlight>Full Stack Engineer Intern</Highlight><br/> at <SecondHighlight>Guidewire Software</SecondHighlight></>
@@ -174,8 +173,14 @@ export const timelineContent = [
         Icon: VolunteerIcon,
         time: new Date("01/01/2023"),
         type: ["work"],
-        durationText: "Jan 2023 - Present",
+        durationText: "Jan 2023",
         title: <>Contributed as <Highlight>Frontend Developer</Highlight><br/> at <SecondHighlight>One Mauve</SecondHighlight></>
+    },
+    {
+        Icon: ExitIcon,
+        time: new Date("05/12/2023"),
+        type: ["work"],
+        title: <><Highlight>Left</Highlight> <SecondHighlight>USC School of Pharmacy</SecondHighlight></>,
     },
     {
         Icon: GraduateIcon,

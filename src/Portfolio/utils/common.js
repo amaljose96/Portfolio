@@ -43,8 +43,8 @@ export function getAnimatedColor(keyframes,percent){
   }
   let slots=keyframes.length-1;
   let index = slots*percent;
-  let previous=keyframes[Math.floor(index)||0]
-  let next=keyframes[Math.ceil(index)||keyframes.length-1]
+  let previous=keyframes[Math.floor(index)]
+  let next=keyframes[Math.ceil(index)]
   let fraction = (index - Math.floor(index)) || 0.5;
   return colors.getTransitionColor(previous,next,fraction)
 }
