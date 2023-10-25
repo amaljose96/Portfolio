@@ -31,7 +31,7 @@ export const skillConfig = {
     },
     "Typescript": {
         type:"languages",
-        confidence: 7,
+        confidence: 10,
     },
     "Python": {
         type:"languages",

@@ -1,5 +1,5 @@
 const fonts={
-    default:"font-family:Roboto,sans-serif;",
+    default:"font-family:Inter,sans-serif;",
     nameplate:""
 }
 
