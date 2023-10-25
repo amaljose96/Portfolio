@@ -4,7 +4,7 @@ export const ProjectsData = [{
         {
             title: "Spotnana OBT",
             description: "The online booking tool for Spotnana that  provides unparalleled corporate travel solutions and global travel service in one intuitive system.",
-            contribution: "I worked as a primary contributor to the Frontend code for Spotnana, building new screens for customers like Amazon, Qantas and Brex",
+            contribution: "I worked as a primary contributor to the Frontend code for Spotnana, building new screens for customers like Qantas and Brex",
             link: "https://app.spotnana.com/",
             techStack: ["React", "Typescript", "React-Native", "CSS","Jest"],
             duration: "Juy 2023 - Present",
