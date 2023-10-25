@@ -31,6 +31,7 @@ export const ProjectSectionTitle = styled.div`
     text-align:center;
     padding:20px 20px;
     margin-bottom:1px;
+    color:${props=>props.backgroundColor};
     background-color:${colors.background};
     box-shadow: 0px 2px 2px 0px ${colors.text}22;
     border-radius:20px 20px 0px 0px;
@@ -113,8 +114,17 @@ export const ProjectStackChip = styled.div`
     }
 `;
 export const backgroundColorKeyframes = [
+    "#CB333B",
+    "#CB333B",
+    "#00569f",
+    "#00569f",
+    "#319cd1",
+    "#319cd1",
     "#990000",
-    "#95aa0f",
-    "#0f8a61",
-    "#0f658a"
+    "#990000",
+    "#44449b",
+    "#44449b",
+    "#CB333B",
+    "#CB333B",
+    "#CB333B",
 ]

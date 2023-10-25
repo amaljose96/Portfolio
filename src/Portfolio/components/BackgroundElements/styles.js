@@ -8,5 +8,5 @@ export const BackgroundElementsContainer = styled.div`
     width:100%;
     opacity:0.5;
     z-index:-1;
-    filter:blur(40px);
+    filter:blur(100px);
 `;

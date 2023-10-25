@@ -6,7 +6,7 @@ import { isMobile } from "./utils/common";
 export const PortfolioContainer = styled.div`
   color: ${colors.text};
   ${fonts.default};
-  width: calc(100vw -${isMobile() ?0:5}px);
+  width: calc(100vw - ${isMobile() ?0:5}px);
   top: 0;
   left: 0;
 `;

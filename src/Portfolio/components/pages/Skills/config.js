@@ -71,6 +71,10 @@ export const skillConfig = {
         type:"frontend",
         confidence: 10,
     },
+    "React-Native": {
+        type:"frontend",
+        confidence: 8,
+    },
     "HTML": {
         type:"frontend",
         confidence: 10,

@@ -13,7 +13,7 @@ export const SkillItemContainer = styled.div`
     opacity:${props=>0.2+props.percent*0.8};
     background-color:${colors.background}08;
     ${props=>props.perfect && `
-        border:solid 1px ${colors.secondary}55;
+        border:solid 1px ${colors.primary}55;
     `}
     :hover{
         background-color:${colors.background}10;

@@ -33,7 +33,7 @@ function Projects({ scroll = 0 }) {
       {
         displayProjects.map((section, si) => {
           return <ProjectSection key={"section_" + si}>
-            <ProjectSectionTitle>{section.title}</ProjectSectionTitle>
+            <ProjectSectionTitle  backgroundColor={backgroundColor}>{section.title}</ProjectSectionTitle>
             <ProjectSectionCards>
               {
                 section.projects.map((project, pi) => {

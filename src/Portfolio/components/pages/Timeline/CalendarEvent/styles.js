@@ -38,7 +38,7 @@ export const IconContainer = styled.div`
 `;
 export const Time = styled.div`
     margin-top:10px;
-    color:${props => colors.getTransitionColor(colors.background, colors.secondary, props.percent)};
+    color:${props => colors.getTransitionColor(colors.background, colors.primary, props.percent)};
 `;
 
 export const BottomContent = styled(TopContent)`

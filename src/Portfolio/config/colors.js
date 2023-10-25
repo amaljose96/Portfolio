@@ -61,8 +61,8 @@ function getTransitionColor(start, end, percent) {
 }
 const colors = {
   text: "#000000",
-  primary: "#990000",
-  secondary: "#FFCC00",
+  primary: "#CB333B",
+  secondary: "#ebadb0",
   shade: "#EFEFEF",
   background: "#FFFFFF",
   getTransitionColor,

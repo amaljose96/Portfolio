@@ -52,7 +52,7 @@ function Navigator({ scroll }) {
           });
         }}>
           <NavigationIcon>
-            <option.icon size={20} fillColor={isOptionActive ? colors.secondary : colors.background} />
+            <option.icon size={20} fillColor={isOptionActive ? colors.background : colors.background} />
           </NavigationIcon>
           <NavigationOptionLabel open={showLabels}>{option.label}</NavigationOptionLabel>
         </NavigationOption>

@@ -19,7 +19,7 @@ export const SummaryElement = styled.div`
 `;
 export const SummaryLabel = styled.div`
     margin-bottom:10px;
-    color:${colors.secondary};
+    color:${colors.primary};
 `;
 export const SummaryValue = styled.div`
     font-size:48px;

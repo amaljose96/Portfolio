@@ -188,6 +188,12 @@ export const timelineContent = [
         type: ["education"],
         title: <><Highlight>Graduated</Highlight> from <SecondHighlight>University of Southern California</SecondHighlight></>,
     },
+    {
+        Icon: WorkIcon,
+        time: new Date("07/31/2023"),
+        type: ["work"],
+        title: <>Started working as <Highlight>Software Developer</Highlight><br/> at <SecondHighlight>Spotnana</SecondHighlight></>
+    },
 ];
 
 export let elementWidth=300;
@@ -199,7 +205,7 @@ if(numItemsInRow < 0){
 export let rowHeight=300;
 export let lineWidth=2;
 export const trackColor = colors.getTransitionColor(colors.text,colors.secondary,0.5);
-export const trainColor = colors.secondary;
+export const trainColor = colors.primary;
 
 
 

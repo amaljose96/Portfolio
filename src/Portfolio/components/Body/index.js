@@ -8,6 +8,7 @@ import Navigator from "../Navigator";
 import Feedback from "../pages/Feedback";
 import Footer from "../Footer";
 import Skills from "../pages/Skills";
+import InterviewPrepper from "../InterviewPrepper";
 
 function Body() {
   const [scrollTop, setScrollTop] = React.useState(0);
@@ -20,6 +21,9 @@ function Body() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  if(window.location.pathname === "/prep"){
+    return <InterviewPrepper/>
+  }
   return <BodyContainer>
     <BackgroundElements/>
     <Landing/>

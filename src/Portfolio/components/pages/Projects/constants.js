@@ -2,12 +2,21 @@ export const ProjectsData = [{
     title: "Work Projects",
     projects: [
         {
+            title: "Spotnana OBT",
+            description: "The online booking tool for Spotnana",
+            contribution: "I worked as a primary contributor to the Frontend code for Spotnana",
+            link: "https://app.spotnana.com/",
+            techStack: ["React", "Typescript", "React-Native", "CSS","Jest"],
+            duration: "Juy 2023 - Present",
+            color: "#CB333B",
+        },
+        {
             title: "AARDVARC",
             description: "USC School of Pharmacy's Automated approach to reviewing and developing valuable assessment resources for its curriculum. It helps the school streamline its programmatic, curricular, faculty, teaching, and experiential data.",
             contribution: "I worked with the team to develop new features and build UX wireframes for the admin panel. ",
             link: "https://acadoinformatics.com/aardvarc/",
             techStack: ["Django", "Python", "HTML", "CSS", "JavaScript", "Figma"],
-            duration: "December 2021 - Present",
+            duration: "December 2021 - May 2023",
             color: "#900",
         },
         {
@@ -15,7 +24,7 @@ export const ProjectsData = [{
             description: "eCases are a part of the Teach Yourself Pharmaceutical Sciences platform by USC School of Pharmacy, aimed at presenting different scenarios to Pharmacy students testing on their response to the situation.",
             contribution: "I worked with the team to develop the eCases using Twine, HTML and CSS. I also developed a platform wherein new eCases can be 'run' instead of built from scratch.",
             techStack: ["Harlowe", "HTML", "CSS", "JavaScript"],
-            duration: "October 2021 - Present",
+            duration: "October 2021 - May 2023",
             color: "#900",
         },
         {
@@ -63,6 +72,14 @@ export const ProjectsData = [{
 {
     title: "Side projects and Volunteering",
     projects: [{
+        title: "One Mauve",
+        link: "https://onemauve.com/",
+        description: "Mentorship program management tool for universities and organizations",
+        contribution: "Worked on the Frontend application and part of the core team.",
+        techStack: ["JavaScript", "React", "styled-components"],
+        duration: "April 2023 - July 2023",
+        color: "#44449b"
+    },{
         title: "Market Sentiment",
         link: "https://www.marketsentiment.live",
         description: "Real-time AI Chatter & Sentiment Analyzer, for stock trading. The application analyses Twitter posts about stock tickers and displays the sentiment associated with a stock, hence providing insights for stock trading.",
